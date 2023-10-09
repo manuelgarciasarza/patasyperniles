@@ -1,0 +1,27 @@
+.container {
+  background-color: #801e00;
+  height: 160px;
+  width: 100%;
+}
+
+.container img {
+  height: 140px;
+  width: 140px;
+}
+
+.content {
+  display: flex;
+  height: 100%;
+  width: 80%;
+  margin: auto;
+  align-items: center;
+}
+
+.logo {
+  width: 30%;
+}
+
+.headerRight {
+  height: 100%;
+}
+/* #801E00 */
