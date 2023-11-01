@@ -5,8 +5,13 @@ function NavBar() {
   return (
     <div className={style.container}>
       <Link className={style.link}>Inicio</Link>
-      <Link className={style.link}>Nosotros</Link>
-      <Link className={style.link}>Servicios</Link>
+      <p className={style.link}>|</p>
+      <Link className={style.link}>Destacados</Link>
+      <p className={style.link}>|</p>
+      <Link className={style.link}>Tienda</Link>
+      <p className={style.link}>|</p>
+      <Link className={style.link}>Opinion</Link>
+      <p className={style.link}>|</p>
       <Link className={style.link}>Contacto</Link>
     </div>
   );
