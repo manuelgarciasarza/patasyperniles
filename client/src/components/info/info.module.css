@@ -1,0 +1,29 @@
+.container {
+  display: grid;
+  grid-template-columns: 200px 400px 300px; /* Definimos 3 columnas: 1fr, 2fr, 1fr */
+  grid-template-rows: auto auto; /* Definimos 2 filas de altura automática */
+  gap: 10px; /* Espacio entre las celdas */
+  height: 300px;
+  margin: 20px;
+  justify-content: center;
+  margin-left: 140px;
+  margin-bottom: 80px;
+}
+
+.gridItem {
+  padding: 10px;
+  color: #161525;
+}
+
+/* La columna del medio ocupará 2 filas */
+.gridItemMid {
+  grid-column: 2 / 3;
+  grid-row: 1 / 3;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.img {
+  height: 350px;
+}

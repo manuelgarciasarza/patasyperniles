@@ -1,0 +1,44 @@
+.container {
+  background-color: #672b29;
+  color: #ffffff;
+  margin-top: 60px;
+}
+
+.footerInfo {
+  display: grid;
+  grid-template-columns: 60% 40%;
+}
+
+.title,
+.footerInfo,
+.redes {
+  margin-left: 60px;
+}
+.title {
+  padding: 20px 0;
+}
+
+.infoLeft {
+  margin-bottom: 20px;
+}
+
+.redes {
+  display: flex;
+  gap: 20px;
+  padding-bottom: 20px;
+}
+
+.img {
+  height: 28px;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+}
+
+.link {
+  color: #ffffff;
+  text-decoration: none;
+  font-size: 10px;
+}

@@ -5,7 +5,7 @@ function BestProducts() {
   return (
     <div className={style.container}>
       <div className={style.titulo}>
-        <h1>NUESTROS PRODUCTOS</h1>
+        <h1>NUESTROS DESTACADOS</h1>
       </div>
       <div className={style.cards}>
         <div className={style.card}>

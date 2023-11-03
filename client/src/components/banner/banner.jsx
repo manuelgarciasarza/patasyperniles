@@ -1,7 +1,7 @@
 import banner1 from "../../img/banner1.jpg";
-import banner2 from "../../img/banner2.jpg";
+/* import banner2 from "../../img/banner2.jpg";
 import banner3 from "../../img/banner3.jpg";
-
+ */
 import style from "./banner.module.css";
 
 import { Carousel } from "react-responsive-carousel";
@@ -20,8 +20,8 @@ function Banner() {
       useKeyboardArrows={true}
     >
       <img className={style.img} src={banner1} alt="" />
-      <img className={style.img} src={banner2} alt="" />
-      <img className={style.img} src={banner3} alt="" />
+      <img className={style.img} src={banner1} alt="" />
+      <img className={style.img} src={banner1} alt="" />
     </Carousel>
   );
 }

@@ -1,5 +1,5 @@
 .container {
-  background-color: #801e00;
+  background-color: #672b29;
   height: 160px;
   width: 100%;
 }
@@ -25,3 +25,14 @@
   height: 100%;
 }
 /* #801E00 */
+
+.cart {
+  position: absolute;
+  right: 100px;
+  top: 20px;
+}
+
+.cart img {
+  height: 30px;
+  width: 30px;
+}
