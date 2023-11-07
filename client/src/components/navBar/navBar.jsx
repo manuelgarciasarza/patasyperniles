@@ -4,11 +4,15 @@ import style from "./navBar.module.css";
 function NavBar() {
   return (
     <div className={style.container}>
-      <Link className={style.link}>Inicio</Link>
+      <Link to={"/"} className={style.link}>
+        Inicio
+      </Link>
       <p className={style.link}>|</p>
       <Link className={style.link}>Destacados</Link>
       <p className={style.link}>|</p>
-      <Link className={style.link}>Tienda</Link>
+      <Link Link to={"/tienda"} className={style.link}>
+        Tienda
+      </Link>
       <p className={style.link}>|</p>
       <Link className={style.link}>Opinion</Link>
       <p className={style.link}>|</p>

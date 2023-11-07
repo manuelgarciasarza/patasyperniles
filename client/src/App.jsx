@@ -4,13 +4,15 @@ import "./App.css";
 
 // components
 import Home from "./views/home/home.jsx";
+import Tienda from "./views/tienda/tienda.jsx";
 
 function MainApp() {
   return (
     <BrowserRouter>
       <div className="App">
         <Routes>
-          <Route path="/" element={<Home />} />
+          <Route path="/" element={<Home />} />{" "}
+          <Route path="/tienda" element={<Tienda />} />
         </Routes>
       </div>
     </BrowserRouter>

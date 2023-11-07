@@ -1,0 +1,57 @@
+.container {
+  margin-top: 60px;
+}
+
+.titulo {
+  height: 100px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #672b29;
+}
+
+.titulo h1 {
+  color: #ffffff;
+  font-size: 60px;
+}
+
+.cards {
+  margin-top: 64px;
+  display: flex;
+  justify-content: center;
+  gap: 80px;
+}
+
+.card {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  background-color: #672b29;
+  height: 400px;
+  width: 340px;
+}
+
+.img {
+  margin-top: 10px;
+  height: 300px;
+  width: 320px;
+}
+
+.nombre,
+.desc {
+  color: #ffffff;
+}
+
+.nombre {
+  width: 100%;
+  margin-left: 60px;
+  display: flex;
+  justify-content: flex-start;
+}
+
+.desc {
+  width: 100%;
+  margin-left: 108px;
+  display: flex;
+  justify-content: flex-start;
+}
