@@ -5,6 +5,8 @@ import "./App.css";
 // components
 import Home from "./views/home/home.jsx";
 import Tienda from "./views/tienda/tienda.jsx";
+import Detail from "./views/detail/detail";
+import Cart from "./views/cart/cart";
 
 function MainApp() {
   return (
@@ -13,6 +15,8 @@ function MainApp() {
         <Routes>
           <Route path="/" element={<Home />} />{" "}
           <Route path="/tienda" element={<Tienda />} />
+          <Route path="/detail" element={<Detail />} />
+          <Route path="/carrito" element={<Cart />} />
         </Routes>
       </div>
     </BrowserRouter>

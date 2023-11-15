@@ -4,6 +4,7 @@ import logo from "../../img/logo.png";
 import cart from "../../img/MdiCartOutline.png";
 
 import style from "./header.module.css";
+import { Link } from "react-router-dom";
 
 function Header() {
   return (
@@ -17,7 +18,9 @@ function Header() {
           <SearchBar />
         </div>
         <div className={style.cart}>
-          <img className={style.cartImg} src={cart} />
+          <Link to="/carrito">
+            <img className={style.cartImg} src={cart} />
+          </Link>
         </div>
       </div>
     </div>

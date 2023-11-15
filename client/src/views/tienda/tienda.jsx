@@ -2,6 +2,7 @@ import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import style from "./tienda.module.css";
 import foto from "../../img/cardej.jpg";
+import { Link } from "react-router-dom";
 
 function Tienda() {
   return (
@@ -45,6 +46,11 @@ function Tienda() {
             </div>
             <div className={style.desc}>
               <h3>Descripción</h3>
+            </div>
+            <div className={style.boton}>
+              <Link to="/detail">
+                <button className={style.btn}>Ver mas</button>
+              </Link>
             </div>
           </div>
         </div>
