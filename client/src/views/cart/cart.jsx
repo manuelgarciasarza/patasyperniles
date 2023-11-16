@@ -21,12 +21,36 @@ const ShoppingCart = () => {
     <div>
       <Header />
       <h2>Carrito de Compras</h2>
-      <p>{pernilDeCerdo.name} </p>
-      <p>{pernilDeCerdo.price} </p>
-      <p>{pataDeTernera.name} </p>
-      <p>${pataDeTernera.price} </p>
-      <p>{combinada.name} </p>
-      <p>{combinada.price} </p>
+      {pernilDeCerdo && (
+        <div>
+          <p>{pernilDeCerdo.name || "Nombre no disponible"} </p>
+          <p>
+            {pernilDeCerdo.price
+              ? `$${pernilDeCerdo.price}`
+              : "Precio no disponible"}{" "}
+          </p>
+        </div>
+      )}
+
+      {pataDeTernera && (
+        <div>
+          <p>{pataDeTernera.name || "Nombre no disponible"} </p>
+          <p>
+            {pataDeTernera.price
+              ? `$${pataDeTernera.price}`
+              : "Precio no disponible"}{" "}
+          </p>
+        </div>
+      )}
+
+      {combinada && (
+        <div>
+          <p>{combinada.name || "Nombre no disponible"} </p>
+          <p>
+            {combinada.price ? `$${combinada.price}` : "Precio no disponible"}{" "}
+          </p>
+        </div>
+      )}
       <button onClick={openWhatsApp}>Hacer el pedido</button>
       <Footer />
     </div>
