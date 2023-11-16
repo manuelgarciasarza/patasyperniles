@@ -1,16 +1,25 @@
 import React, { useState } from "react";
-import Header from "../../components/header/header";
-import Footer from "../../components/footer/footer";
-import ShoppingCart from "../cart/cart"; // Ajusta la ruta según tu estructura de archivos
-import pernil from "../../img/banners.jpg";
-import style from "./detail.module.css";
+import Header from "../../../components/header/header";
+import Footer from "../../../components/footer/footer";
+import pernil from "../../../img/banners.jpg";
+import style from "../detail.module.css";
 
 function Detail() {
   const [selectedOption, setSelectedOption] = useState("10");
   const [selectedPrice, setSelectedPrice] = useState("$28.300");
-  const [cart, setCart] = useState([]);
-  const [name, setName] = useState("");
-  const [lastName, setLastName] = useState("");
+  function setCarrito() {
+    try {
+      const newProduct = {
+        name: "Pernil de cerdo",
+        amount: selectedOption,
+        price: selectedPrice,
+      };
+      localStorage.setItem("pernilDeCerdo", JSON.stringify(newProduct));
+    } catch (error) {
+      console.log(error);
+    }
+    console.log(JSON.parse(localStorage.getItem("pernilDeCerdo")));
+  }
 
   const handleOptionChange = (e) => {
     const selectedValue = e.target.value;
@@ -48,6 +57,7 @@ function Detail() {
       <Header />
       <div>
         <div>
+          <div>Pernil de cerdo</div>
           <div>
             <img src={pernil} alt="" />
           </div>
@@ -79,20 +89,12 @@ function Detail() {
             </div>
             <div>
               <p>{selectedPrice}</p>
-              <button onClick={addToCart}>Agregar al Carrito</button>
+              <button onClick={setCarrito}>Agregar al Carrito</button>
             </div>
           </div>
         </div>
       </div>
       <Footer />
-      {/* Pasar el carrito como prop al componente ShoppingCart */}
-      <ShoppingCart
-        cart={cart}
-        name={name}
-        setName={setName}
-        lastName={lastName}
-        setLastName={setLastName}
-      />
     </div>
   );
 }

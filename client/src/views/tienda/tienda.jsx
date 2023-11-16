@@ -23,6 +23,11 @@ function Tienda() {
             <div className={style.desc}>
               <h3>Descripción</h3>
             </div>
+            <div className={style.boton}>
+              <Link to="/pernil-de-cerdo">
+                <button className={style.btn}>Ver mas</button>
+              </Link>
+            </div>
           </div>
 
           <div className={style.card}>
@@ -34,6 +39,11 @@ function Tienda() {
             </div>
             <div className={style.desc}>
               <h3>Descripción</h3>
+            </div>{" "}
+            <div className={style.boton}>
+              <Link to="/pata-de-ternera">
+                <button className={style.btn}>Ver mas</button>
+              </Link>
             </div>
           </div>
 
@@ -48,7 +58,7 @@ function Tienda() {
               <h3>Descripción</h3>
             </div>
             <div className={style.boton}>
-              <Link to="/detail">
+              <Link to="/combinado-cerdo-ternera">
                 <button className={style.btn}>Ver mas</button>
               </Link>
             </div>
