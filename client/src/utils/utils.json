@@ -1,0 +1,295 @@
+[
+  {
+    "id": 1,
+    "nombre": "Pernil de Cerdo",
+    "descripcion": "Es una opcion práctica que elegimos cuando tenemos un evento familiar, empresarial, o eventual. Para compartir con la familia los amigos o compañeros de trabajo. Se entrega caliente, acompañado de panes y salsas, listo para servir en la mesa.",
+    "preparacion": "Se  obtiene a partir del cuarto  trasero o delantero del animal. Como primer medida se le retira el cuero para luego ser macerado con una base de finas hierbas varias horas, esto nos permite que la cocción en nuestros hornos a temperatura baja estén libres de grasa para poder acentuar en el pernil los sabores que le aportan las especies y asi garantizar un sabor exquisito.",
+    "presentacion": "Se entrega en una caja con visor. La base que tiene viene forrada en papel aluminio es utilizada como bandeja para filetear el producto y servirlo en la mesa. El pernil viene caliente envuelto en papel aluminio y film térmico para conservar su temperatura (3 hs) hasta el momento de servirse. Va acompañado de pancitos caseros y deliciosas salsas en bols con sus respectivas fajas de identificación, y cada una con sus untadores de madera fáciles de usar. Las figacitas de manteca caseras van en una bolsa de naylon para conservar su textura, tambien adentro de bolsa de papel que se utiliza como panera  en la mesa.",
+    "fileteador": "Es una persona que filetea el pernil y coloca dicho corte en la figacita previamente contada. Entregandole al comensal quien lo recibe y elige en una variedad de salsas con la que va a acompañar el sandwich.",
+    "imagen": "pernil_de_cerdo.jpg",
+    "porciones": [
+      {
+        "cantidad": 10,
+        "precio": 28300
+      },
+      {
+        "cantidad": 15,
+        "precio": 32500
+      },
+      {
+        "cantidad": 20,
+        "precio": 41000
+      },
+      {
+        "cantidad": 30,
+        "precio": 53100
+      },
+      {
+        "cantidad": 40,
+        "precio": 65200
+      },
+      {
+        "cantidad": 50,
+        "precio": 95100
+      },
+      {
+        "cantidad": 60,
+        "precio": 102900
+      },
+      {
+        "cantidad": 70,
+        "precio": 119500
+      },
+      {
+        "cantidad": 80,
+        "precio": 155400
+      },
+      {
+        "cantidad": 100,
+        "precio": 172100
+      },
+      {
+        "cantidad": 150,
+        "precio": 259000
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "nombre": "Pata de Ternera",
+    "descripcion": "Es una opcion práctica que elegimos cuando tenemos un evento familiar, empresarial, o eventual. Para compartir con la familia los amigos o compañeros de trabajo. Se entrega caliente, acompañado de panes y salsas, listo para servir en la mesa.",
+    "preparacion": "La pata de ternera se obtiene del cuarto trasero o cuarto delantero del animal según la cantidad de comensales solicitado. Se deja macerar varias horas con especies de distintos sabores. Luego ingresa al horno a temperatura de 180/ 200 grados para ser horneado lentamente asi conservar la terneza de la pata y su cocción hasta el hueso.",
+    "presentacion": "Se entrega en una caja con visor. La base que tiene viene forrada en papel aluminio es utilizada como bandeja para filetear el producto y servirlo en la mesa. El pernil viene caliente envuelto en papel aluminio y film térmico para conservar su temperatura (3 hs) hasta el momento de servirse. Va acompañado de pancitos caseros y deliciosas salsas en bols con sus respectivas fajas de identificación, y cada una con sus untadores de madera fáciles de usar. Las figacitas de manteca caseras van en una bolsa de naylon para conservar su textura, tambien adentro de bolsa de papel que se utiliza como panera  en la mesa.",
+    "imagen": "pata_de_ternera.jpg",
+    "fileteador": "Es una persona que filetea el pernil y coloca dicho corte en la figacita previamente contada. Entregandole al comensal quien lo recibe y elige en una variedad de salsas con la que va a acompañar el sandwich.",
+    "porciones": [
+      {
+        "cantidad": 15,
+        "precio": 47500
+      },
+      {
+        "cantidad": 20,
+        "precio": 58500
+      },
+      {
+        "cantidad": 30,
+        "precio": 82400
+      },
+      {
+        "cantidad": 35,
+        "precio": 87800
+      },
+      {
+        "cantidad": 40,
+        "precio": 92200
+      },
+      {
+        "cantidad": 50,
+        "precio": 108300
+      },
+      {
+        "cantidad": 60,
+        "precio": 131000
+      },
+      {
+        "cantidad": 70,
+        "precio": 136000
+      },
+      {
+        "cantidad": 80,
+        "precio": 155800
+      },
+      {
+        "cantidad": 100,
+        "precio": 175800
+      },
+      {
+        "cantidad": 150,
+        "precio": 195000
+      }
+    ]
+  },
+  {
+    "id": 3,
+    "nombre": "Combinada de Cerdo y Ternera",
+    "descripcion": "Aquí encontraremos la combinacion del pernil de cerdo y la pata de ternera para reuniones o eventos mas de 25 comensales y compartir con familia, amigos, compañeros de trabajo. Se entrega caliente, acompañado de panes y deliciosas salsas, listo para servir en la mesa.",
+    "preparacion": "La pata de ternera se obtiene del cuarto trasero o cuarto delantero del animal según la cantidad de comensales solicitado. Se deja macerar varias horas con especies de distintos sabores. Luego ingresa al horno a temperatura de 180/ 200 grados para ser horneado lentamente asi conservar la terneza de la pata y su cocción hasta el hueso.",
+    "presentacion": "Se entrega en una caja con visor. La base que tiene viene forrada en papel aluminio es utilizada como bandeja para filetear el producto y servirlo en la mesa. El pernil viene caliente envuelto en papel aluminio y film térmico para conservar su temperatura (3 hs) hasta el momento de servirse. Va acompañado de pancitos caseros y deliciosas salsas en bols con sus respectivas fajas de identificación, y cada una con sus untadores de madera fáciles de usar. Las figacitas de manteca caseras van en una bolsa de naylon para conservar su textura, tambien adentro de bolsa de papel que se utiliza como panera  en la mesa.",
+    "imagen": "combinada.jpg",
+    "fileteador": "Es una persona que filetea el pernil y coloca dicho corte en la figacita previamente contada. Entregandole al comensal quien lo recibe y elige en una variedad de salsas con la que va a acompañar el sandwich.",
+    "porciones": [
+      {
+        "cantidad": 25,
+        "precio": 78800
+      },
+      {
+        "cantidad": 30,
+        "precio": 82400
+      },
+      {
+        "cantidad": 40,
+        "precio": 102300
+      },
+      {
+        "cantidad": 50,
+        "precio": 125800
+      },
+      {
+        "cantidad": 60,
+        "precio": 137700
+      },
+      {
+        "cantidad": 70,
+        "precio": 147800
+      },
+      {
+        "cantidad": 80,
+        "precio": 159700
+      },
+      {
+        "cantidad": 90,
+        "precio": 175600
+      },
+      {
+        "cantidad": 100,
+        "precio": 194800
+      },
+      {
+        "cantidad": 120,
+        "precio": 234500
+      },
+      {
+        "cantidad": 140,
+        "precio": 274300
+      },
+      {
+        "cantidad": 150,
+        "precio": 293100
+      },
+      {
+        "cantidad": 200,
+        "precio": 392200
+      }
+    ]
+  },
+
+  {
+    "id": 4,
+    "nombre": "Ternera  Filetada",
+    "descripcion": "Esta opcion fue creada para reuniones de 2 a  10 invitados. Tiene una particularidad, es entregada ya fileteada lista para armar los sándwich en el momento.",
+    "preparacion": "La pieza de ternera es macerada en una base condimentos seleccionados, envuelta en papel aluminio y colocada en horno para su proceso de cocción. Se reposa hasta el momento de ser fileteada.",
+    "presentacion": "Se entrega en caja con visor que contiene la ternera fileteada fria envasada al vacio, la cual será calentada 10 minutos antes de servir en baño maria. Acompaña unas deliciosas salsas en bols con faja identificadora y untadores de madera. Pancitos de manteca caseros.",
+    "fileteador": "Tambien tenemos la opción de la ternera fileteada caliente envasada en bandeja de aluminio. Acompañada con deliciosas salsas y figazitas de manteca.",
+    "imagen": "tenera_fileteada.jpg",
+    "porciones": [
+      {
+        "cantidad": 2,
+        "precio": 9200
+      },
+      {
+        "cantidad": 4,
+        "precio": 14800
+      },
+      {
+        "cantidad": 8,
+        "precio": 28000
+      },
+      {
+        "cantidad": 10,
+        "precio": 30500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Cerdo Filetado",
+    "descripcion": "Esta opcion fue creada para reuniones de 2 a  10 invitados. Tiene una particularidad, es entregada ya fileteada lista para armar los sándwich en el momento.",
+    "preparacion": "La pieza de cerdo es macerada en una base mostaza y condimentos, envuelta en papel aluminio y colocada en horno para su proceso de cocción. Se reposa hasta el momento de ser fileteada.",
+    "presentacion": "Se entrega en caja con visor que contiene la ternera fileteada fria envasada al vacio, la cual será calentada 10 minutos antes de servir en baño maria. Acompaña unas deliciosas salsas en bols con faja identificadora y untadores de madera. Pancitos de manteca caseros.",
+    "fileteador": "Tambien tenemos la opción de la ternera fileteada caliente envasada en bandeja de aluminio. Acompañada con deliciosas salsas y figazitas de manteca.",
+    "imagen": "cerdo_fileteado.jpg",
+    "porciones": [
+      {
+        "cantidad": 2,
+        "precio": 8900
+      },
+      {
+        "cantidad": 4,
+        "precio": 13900
+      },
+      {
+        "cantidad": 8,
+        "precio": 27300
+      },
+      {
+        "cantidad": 10,
+        "precio": 28500
+      }
+    ]
+  },
+
+  {
+    "id": 6,
+    "nombre": "Ternera Desmechada",
+    "descripcion": "Son hebras de ternera tiernizadas y desmechadas combinada con  vegetales seleccionados elaborados artesanalmente por el chef. Son ideales para armar sándwich con figacitas de manteca caseras o tacos acompañados de sus tortilas.",
+    "preparacion": null,
+    "presentacion": "Son entregados en caja cerrada con visor donde podremos visualizar el producto envasado al vacio con sus variadas y exquisitas salsas y sus respectivos untadores incluye pancitos caserios.",
+    "fileteador": null,
+    "imagen": "ternera_desmechada.jpg",
+    "porciones": [
+      {
+        "cantidad": 2,
+        "precio": 9200
+      },
+      {
+        "cantidad": 4,
+        "precio": 13500
+      },
+      {
+        "cantidad": 8,
+        "precio": 25000
+      }
+    ]
+  },
+  {
+    "id": 7,
+    "nombre": "Cerdo Desmechado",
+    "descripcion": "Son hebras de cerdo tiernizadas y desmechadas combinada con  vegetales seleccionados elaborados artesanalmente por el chef. Son ideales para armar sándwich con figacitas de manteca caseras o tacos acompañados de sus tortilas.",
+    "preparacion": null,
+    "presentacion": "Son entregados en caja cerrada con visor donde podremos visualizar el producto envasado al vacio con sus variadas y exquisitas salsas y sus respectivos untadores incluye pancitos caserios.",
+    "fileteador": null,
+    "imagen": "cerdo_desmechado.jpg",
+    "porciones": [
+      {
+        "cantidad": 2,
+        "precio": 8900
+      },
+      {
+        "cantidad": 4,
+        "precio": 13900
+      },
+      {
+        "cantidad": 8,
+        "precio": 24200
+      }
+    ]
+  },
+  {
+    "id": 8,
+    "descripcion": "En una reunion siempre hay que tener presente a las personas que son vegetarianas. Para ellos tenemos unos riquisimos tacos hechos con un mix de verduras grilladas, hortalizas frescas, y legumbres. Condimentada con una selección especial de hierbas aromaticas y unas suaves salsas de guacamole y philadelphia.",
+    "preparacion": null,
+    "presentacion": "Son entregados en caja cerrada con visor donde podremos visualizar el producto envasado al vacio incluyendo variadas y exquisitas salsas con sus respectivos untadores.",
+    "fileteador": null,
+    "imagen": "cerdo_desmechado.jpg",
+    "porciones": [
+      {
+        "cantidad": 2,
+        "precio": 9200
+      },
+      {
+        "cantidad": 4,
+        "precio": 12500
+      }
+    ]
+  }
+]

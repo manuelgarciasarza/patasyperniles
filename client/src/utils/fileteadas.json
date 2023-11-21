@@ -1,0 +1,56 @@
+[
+  {
+    "id": 4,
+    "nombre": "Ternera  Filetada",
+    "descripcion": "Esta opcion fue creada para reuniones de 2 a  10 invitados. Tiene una particularidad, es entregada ya fileteada lista para armar los sándwich en el momento.",
+    "preparacion": "La pieza de ternera es macerada en una base condimentos seleccionados, envuelta en papel aluminio y colocada en horno para su proceso de cocción. Se reposa hasta el momento de ser fileteada.",
+    "presentacion": "Se entrega en caja con visor que contiene la ternera fileteada fria envasada al vacio, la cual será calentada 10 minutos antes de servir en baño maria. Acompaña unas deliciosas salsas en bols con faja identificadora y untadores de madera. Pancitos de manteca caseros.",
+    "fileteador": "Tambien tenemos la opción de la ternera fileteada caliente envasada en bandeja de aluminio. Acompañada con deliciosas salsas y figazitas de manteca.",
+    "imagen": "tenera_fileteada.jpg",
+    "porciones": [
+      {
+        "cantidad": 2,
+        "precio": 9200
+      },
+      {
+        "cantidad": 4,
+        "precio": 14800
+      },
+      {
+        "cantidad": 8,
+        "precio": 28000
+      },
+      {
+        "cantidad": 10,
+        "precio": 30500
+      }
+    ]
+  },
+  {
+    "id": 5,
+    "nombre": "Cerdo Filetado",
+    "descripcion": "Esta opcion fue creada para reuniones de 2 a  10 invitados. Tiene una particularidad, es entregada ya fileteada lista para armar los sándwich en el momento.",
+    "preparacion": "La pieza de cerdo es macerada en una base mostaza y condimentos, envuelta en papel aluminio y colocada en horno para su proceso de cocción. Se reposa hasta el momento de ser fileteada.",
+    "presentacion": "Se entrega en caja con visor que contiene la ternera fileteada fria envasada al vacio, la cual será calentada 10 minutos antes de servir en baño maria. Acompaña unas deliciosas salsas en bols con faja identificadora y untadores de madera. Pancitos de manteca caseros.",
+    "fileteador": "Tambien tenemos la opción de la ternera fileteada caliente envasada en bandeja de aluminio. Acompañada con deliciosas salsas y figazitas de manteca.",
+    "imagen": "cerdo_fileteado.jpg",
+    "porciones": [
+      {
+        "cantidad": 2,
+        "precio": 8900
+      },
+      {
+        "cantidad": 4,
+        "precio": 13900
+      },
+      {
+        "cantidad": 8,
+        "precio": 27300
+      },
+      {
+        "cantidad": 10,
+        "precio": 28500
+      }
+    ]
+  }
+]
