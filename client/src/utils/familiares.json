@@ -1,0 +1,55 @@
+[
+  {
+    "id": 9,
+    "nombre": "Bondeola Braseada",
+    "descripcion": "Es una exquisita receta en la cual se podra degustar el sabor auténtico de la bondiola. Cuando ingresa en nuestros hornos previamente amacerada en una crema a base de mostaza con finas hierbas a temperaturas minima para lograr que la bondiola mantenga sus propiedades y su coccion sea pareja ademas de jugosa.",
+    "preparacion": null,
+    "presentacion": "Son entregados en caja cerrada con visor donde podremos visualizar el producto envasado al vacio, incluye variedad de exquisitas salsas con sus respectivos untadores.",
+    "fileteador": null,
+    "imagen": "bondeala_braseada.jpg",
+    "porciones": [
+      {
+        "cantidad": "6 a 8",
+        "precio": 32700
+      }
+    ]
+  },
+  {
+    "id": 10,
+    "nombre": "Ribs Braseadas",
+    "descripcion": "Las Ribs de Ternera son una opcion sencilla que resulta perfecta para una reunion de pocos comensales.",
+    "preparacion": "Las Ribs son untadas con una salsa de barbacoa y puesta a reposar  para acentuar todas las propiedades de la carne de ternera. Luego pasa al proceso de sellado y horneado para conseguir que tenga mas sabor y sea mas jugosas. De esta manera se convierte en un bocado exquisito al paladar.",
+    "presentacion": "Son entregados en caja cerrada con visor donde podremos visualizar el producto envasado al vacio, incluye variedad de exquisitas salsas con sus respectivos untadores.",
+    "fileteador": null,
+    "imagen": "ribs_braseadas.jpg",
+    "porciones": [
+      {
+        "cantidad": "2 a 3",
+        "precio": 10500
+      },
+      {
+        "cantidad": "4 a 5",
+        "precio": 16800
+      }
+    ]
+  },
+  {
+    "id": 11,
+    "nombre": "Pata de Cordero",
+    "descripcion": "ELa carne de cordero es muy requerida por ser magra, tierna y sabrosa",
+    "preparacion": "Su proceso de coccion se realiza sobre una base de verduras, hierbas, vino y otras especies aromáticas.",
+    "presentacion": "Son entregados en caja cerrada con visor donde podremos visualizar el producto envasado al vacio incluyendo variadas y exquisitas salsas con sus respectivos untadores.",
+    "fileteador": null,
+    "imagen": "pata_de_cordero.jpg",
+    "porciones": [
+      {
+        "cantidad": "3 a 4",
+        "precio": 17800
+      },
+      {
+        "cantidad": "6 a 7",
+        "precio": 32500
+      }
+    ]
+  }
+]
