@@ -15,7 +15,6 @@ function Header() {
         </div>
         <div className={style.headerRight}>
           <NavBar />
-          <SearchBar />
         </div>
         <div className={style.cart}>
           <Link to="/carrito">

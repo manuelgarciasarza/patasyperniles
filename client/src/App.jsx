@@ -9,6 +9,7 @@ import Detail1 from "./views/detail/detail1/detail1.jsx";
 import Detail2 from "./views/detail/detail2/detail2.jsx";
 import Detail3 from "./views/detail/detail3/detail3.jsx";
 import Cart from "./views/cart/cart";
+import Contact from "./views/contact/contact.jsx";
 
 function MainApp() {
   return (
@@ -16,7 +17,8 @@ function MainApp() {
       <div className="App">
         <Routes>
           <Route path="/" element={<Home />} />{" "}
-          <Route path="/tienda" element={<Tienda />} />
+          <Route path="/tienda" element={<Tienda />} />{" "}
+          <Route path="/contacto" element={<Contact />} />
           <Route path="/pernil-de-cerdo" element={<Detail1 />} />
           <Route path="/pata-de-ternera" element={<Detail2 />} />
           <Route path="/combinado-cerdo-ternera" element={<Detail3 />} />
