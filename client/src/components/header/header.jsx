@@ -1,5 +1,4 @@
 import NavBar from "../navBar/navBar";
-import SearchBar from "../searchBar/searchBar";
 import logo from "../../img/logo.png";
 import cart from "../../img/MdiCartOutline.png";
 
