@@ -4,20 +4,31 @@ import Header from "../../../components/header/header";
 import Footer from "../../../components/footer/footer";
 import style from "../detail.module.css";
 import productosData from "../../../utils/patas.json";
+import fileteadasData from "../../../utils/fileteadas.json"; // Importa los datos de fileteadas.json
 import imagenPernil from "../../../img/banner11.jpg"; 
 
 function Detail() {
   const { productName } = useParams();
-  const [productInfo, setProductInfo] = useState(null); 
+  const [productInfo, setProductInfo] = useState(null);
+  const [isFromProductos, setIsFromProductos] = useState(false); // Bandera para identificar el tipo de producto
 
   useEffect(() => {
-    const foundProduct = productosData.find(
+    const foundProductInProductos = productosData.find(
       (producto) =>
         producto.nombre.toLowerCase().replace(/\s/g, "-") === productName
-    );    
-  
-    if (foundProduct) {
-      setProductInfo(foundProduct);
+    );
+
+    const foundProductInFileteadas = fileteadasData.find(
+      (fileteada) =>
+        fileteada.nombre.toLowerCase().replace(/\s/g, "-") === productName
+    );
+
+    if (foundProductInProductos) {
+      setProductInfo(foundProductInProductos);
+      setIsFromProductos(true); // Producto encontrado en productosData
+    } else if (foundProductInFileteadas) {
+      setProductInfo(foundProductInFileteadas);
+      setIsFromProductos(false); // Producto encontrado en fileteadasData
     }
   }, [productName]);
   
@@ -93,10 +104,25 @@ function Detail() {
       ) : (
         <div>Cargando...</div>
       )}
+
+{productInfo ? (
+        <div className={style.container}>
+         
+          {isFromProductos && (
+            <>
+              <div>{productInfo.nombre}</div>
+            </>
+          )}
+
+          
+        </div>
+      ) : (
+        <div>Cargando...</div>
+      )}
+
       <Footer />
     </div>
   );
-  
 }
 
 export default Detail;

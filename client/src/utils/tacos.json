@@ -47,11 +47,12 @@
   },
   {
     "id": 8,
+    "nombre": "Taco vegetariano",
     "descripcion": "En una reunion siempre hay que tener presente a las personas que son vegetarianas. Para ellos tenemos unos riquisimos tacos hechos con un mix de verduras grilladas, hortalizas frescas, y legumbres. Condimentada con una selección especial de hierbas aromaticas y unas suaves salsas de guacamole y philadelphia.",
     "preparacion": null,
     "presentacion": "Son entregados en caja cerrada con visor donde podremos visualizar el producto envasado al vacio incluyendo variadas y exquisitas salsas con sus respectivos untadores.",
     "fileteador": null,
-    "imagen": "cerdo_desmechado.jpg",
+    "imagen": "taco_vetariano.jpg",
     "porciones": [
       {
         "cantidad": 2,
