@@ -1,0 +1,33 @@
+[
+  {
+    "id": 12,
+    "nombre": "Tabla de Picada artesanal",
+    "descripcion": "La tabla de picadas es tipica de los argentinos en el momento de recpcionar a los invitados.",
+    "preparacion": "Esta compuesta por una gama de quesos intensos y suaves, fiambres de altisima calidad, frutos secos, ciruelas, pasas, aceitunas rellenas. Tambien incluye variedad de brusquetas, brochettes, papines salteados en manteca, pollo marinado, berenjenas. Acompañado de pan de campo saborizado y una delicada salsa tartara.",
+    "presentacion": "Es entregada en una caja cerrada de visor transparente con base forrada en aluminio que sirve como bandeja para llevar a la mesa. Salsa y untador de madera.",
+    "fileteador": null,
+    "imagen": "picada.jpg",
+    "porciones": [
+      {
+        "cantidad": "2 a 4",
+        "precio": 18000
+      },
+      {
+        "cantidad": "4 a 8",
+        "precio": 22800
+      },
+      {
+        "cantidad": "5 a 10",
+        "precio": 30500
+      },
+      {
+        "cantidad": "10 a 15",
+        "precio": 36500
+      },
+      {
+        "cantidad": "15 a 20",
+        "precio": 44500
+      }
+    ]
+  }
+]
