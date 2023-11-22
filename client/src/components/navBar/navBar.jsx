@@ -8,15 +8,15 @@ function NavBar() {
         Inicio
       </Link>
       <p className={style.link}>|</p>
-      <Link className={style.link}>Destacados</Link>
-      <p className={style.link}>|</p>
       <Link Link to={"/tienda"} className={style.link}>
         Tienda
       </Link>
       <p className={style.link}>|</p>
-      <Link className={style.link}>Opinion</Link>
+      <Link className={style.link}>Nosotros</Link>
       <p className={style.link}>|</p>
-      <Link className={style.link}>Contacto</Link>
+      <Link Link to={"/contacto"} className={style.link}>
+        Contacto
+      </Link>
     </div>
   );
 }

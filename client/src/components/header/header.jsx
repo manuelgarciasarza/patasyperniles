@@ -1,5 +1,4 @@
 import NavBar from "../navBar/navBar";
-import SearchBar from "../searchBar/searchBar";
 import logo from "../../img/logo.png";
 import cart from "../../img/MdiCartOutline.png";
 
@@ -15,7 +14,6 @@ function Header() {
         </div>
         <div className={style.headerRight}>
           <NavBar />
-          <SearchBar />
         </div>
         <div className={style.cart}>
           <Link to="/carrito">
