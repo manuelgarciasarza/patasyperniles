@@ -7,7 +7,8 @@ import productosData from "../../../utils/patas.json";
 import fileteadasData from "../../../utils/fileteadas.json"; 
 import imagenPernil from "../../../img/banner11.jpg"; 
 import tacosData from "../../../utils/tacos.json";
-
+import familiaresData from "../../../utils/familiares.json";
+import picadasData from "../../../utils/picadas.json";
 
 function Detail() {
   const { productName } = useParams();
@@ -26,8 +27,18 @@ function Detail() {
     );
 
     const foundProductInTacos = tacosData.find(
-      (fileteada) =>
-        fileteada.nombre.toLowerCase().replace(/\s/g, "-") === productName
+      (tacos) =>
+        tacos.nombre.toLowerCase().replace(/\s/g, "-") === productName
+    );
+
+    const foundProductInFamiliares = familiaresData.find(
+      (familiares) =>
+      familiares.nombre.toLowerCase().replace(/\s/g, "-") === productName
+    );
+
+    const foundProductInPicadas = picadasData.find(
+      (picadas) =>
+      picadas.nombre.toLowerCase().replace(/\s/g, "-") === productName
     );
 
     if (foundProductInProductos) {
@@ -41,24 +52,31 @@ function Detail() {
       setProductInfo(foundProductInTacos);
       setIsFromProductos(false); 
     }
-    
+    else if (foundProductInFamiliares) {
+      setProductInfo(foundProductInFamiliares);
+      setIsFromProductos(false); 
+    }
+    else if (foundProductInPicadas) {
+      setProductInfo(foundProductInPicadas);
+      setIsFromProductos(false); 
+    }
   }, [productName]);
   
 
   const [selectedOption, setSelectedOption] = useState("10");
-  const [selectedPrice, setSelectedPrice] = useState("$28.300");
+  const [selectedPrice, setSelectedPrice] = useState(""); 
 
   const handleOptionChange = (e) => {
     const selectedValue = e.target.value;
-
+  
     if (productInfo && productInfo.porciones) {
       const prices = productInfo.porciones.reduce((acc, porcion) => {
         acc[porcion.cantidad.toString()] = `$${porcion.precio}`;
         return acc;
       }, {});
-
+  
       setSelectedOption(selectedValue);
-      setSelectedPrice(prices[selectedValue]);
+      setSelectedPrice(prices[selectedValue] || ""); 
     }
   };
 
@@ -93,18 +111,20 @@ function Detail() {
             </div>
             <div>
               <div>
-                <select
-                  name=""
-                  id=""
-                  value={selectedOption}
-                  onChange={handleOptionChange}
-                >
-                  {productInfo.porciones.map((porcion) => (
-                    <option key={porcion.cantidad} value={porcion.cantidad}>
-                      {porcion.cantidad}
-                    </option>
-                  ))}
-                </select>
+              <select
+  name=""
+  id=""
+  value={selectedOption}
+  onChange={handleOptionChange}
+>
+  <option value="">Seleccione una cantidad</option>
+  {productInfo.porciones.map((porcion) => (
+    <option key={porcion.cantidad} value={porcion.cantidad}>
+      {porcion.cantidad}
+    </option>
+  ))}
+</select>
+
               </div>
               <div>
                 <p>{selectedPrice}</p>

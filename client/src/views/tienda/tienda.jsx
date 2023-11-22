@@ -7,6 +7,9 @@ import { Link } from "react-router-dom";
 import productosData from "../../utils/patas.json";
 import fileteadasData from "../../utils/fileteadas.json";
 import tacosData from "../../utils/tacos.json";
+import familiaresData from "../../utils/familiares.json";
+import picadasData from "../../utils/picadas.json";
+
 
 function Tienda() {
   return (
@@ -60,7 +63,7 @@ function Tienda() {
           ))}
         </div>
 
-        <br/>
+        <br/> {/* siguen los br */}
 
         <div className={style.titulo}>
           <h1>TACOS</h1>
@@ -77,6 +80,56 @@ function Tienda() {
     </div>
     <Link
       to={`/detalle/${taco.nombre ? taco.nombre.toLowerCase().replace(/\s/g, "-") : ""}`}
+      className={style.boton}
+    >
+      <button className={style.btn}>Ver más</button>
+    </Link>
+  </div>
+))}
+        </div>
+
+        <br/> {/* otro más */}
+
+        <div className={style.titulo}>
+          <h1>FAMILIARES</h1>
+        </div>
+        <div className={style.cards}>
+         
+        {familiaresData.map((familiares) => (
+  <div className={style.card} key={familiares.id}>
+    <div>
+      <img className={style.img} src={foto} alt="" />
+    </div>
+    <div className={style.nombre}>
+      <h2>{familiares.nombre }</h2>
+    </div>
+    <Link
+      to={`/detalle/${familiares.nombre ? familiares.nombre.toLowerCase().replace(/\s/g, "-") : ""}`}
+      className={style.boton}
+    >
+      <button className={style.btn}>Ver más</button>
+    </Link>
+  </div>
+))}
+        </div>
+
+        <br/> {/* EL ÚLTIMO CON ESTE NO JODO MÁS */}
+
+        <div className={style.titulo}>
+          <h1>PICADAS</h1>
+        </div>
+        <div className={style.cards}>
+         
+        {picadasData.map((picadas) => (
+  <div className={style.card} key={picadas.id}>
+    <div>
+      <img className={style.img} src={foto} alt="" />
+    </div>
+    <div className={style.nombre}>
+      <h2>{picadas.nombre }</h2>
+    </div>
+    <Link
+      to={`/detalle/${picadas.nombre ? picadas.nombre.toLowerCase().replace(/\s/g, "-") : ""}`}
       className={style.boton}
     >
       <button className={style.btn}>Ver más</button>
