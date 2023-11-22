@@ -4,13 +4,15 @@ import Header from "../../../components/header/header";
 import Footer from "../../../components/footer/footer";
 import style from "../detail.module.css";
 import productosData from "../../../utils/patas.json";
-import fileteadasData from "../../../utils/fileteadas.json"; // Importa los datos de fileteadas.json
+import fileteadasData from "../../../utils/fileteadas.json"; 
 import imagenPernil from "../../../img/banner11.jpg"; 
+import tacosData from "../../../utils/tacos.json";
+
 
 function Detail() {
   const { productName } = useParams();
   const [productInfo, setProductInfo] = useState(null);
-  const [isFromProductos, setIsFromProductos] = useState(false); // Bandera para identificar el tipo de producto
+  const [isFromProductos, setIsFromProductos] = useState(false); 
 
   useEffect(() => {
     const foundProductInProductos = productosData.find(
@@ -23,13 +25,23 @@ function Detail() {
         fileteada.nombre.toLowerCase().replace(/\s/g, "-") === productName
     );
 
+    const foundProductInTacos = tacosData.find(
+      (fileteada) =>
+        fileteada.nombre.toLowerCase().replace(/\s/g, "-") === productName
+    );
+
     if (foundProductInProductos) {
       setProductInfo(foundProductInProductos);
-      setIsFromProductos(true); // Producto encontrado en productosData
+      setIsFromProductos(true); 
     } else if (foundProductInFileteadas) {
       setProductInfo(foundProductInFileteadas);
-      setIsFromProductos(false); // Producto encontrado en fileteadasData
+      setIsFromProductos(false); 
     }
+    else if (foundProductInTacos) {
+      setProductInfo(foundProductInTacos);
+      setIsFromProductos(false); 
+    }
+    
   }, [productName]);
   
 
@@ -105,20 +117,7 @@ function Detail() {
         <div>Cargando...</div>
       )}
 
-{productInfo ? (
-        <div className={style.container}>
-         
-          {isFromProductos && (
-            <>
-              <div>{productInfo.nombre}</div>
-            </>
-          )}
 
-          
-        </div>
-      ) : (
-        <div>Cargando...</div>
-      )}
 
       <Footer />
     </div>
