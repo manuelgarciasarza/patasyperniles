@@ -12,7 +12,9 @@ function NavBar() {
         Tienda
       </Link>
       <p className={style.link}>|</p>
-      <Link className={style.link}>Nosotros</Link>
+      <Link Link to={"/nosotros"} className={style.link}>
+        Nosotros
+      </Link>
       <p className={style.link}>|</p>
       <Link Link to={"/contacto"} className={style.link}>
         Contacto

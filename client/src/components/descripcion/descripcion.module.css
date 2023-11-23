@@ -3,26 +3,37 @@
 }
 
 .content {
-  width: 80%;
-
   margin: 16px auto;
 }
 
+.title {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  background-color: #672b29;
+  color: #ffffff;
+  height: 100px;
+  margin-bottom: 40px;
+  margin-top: 40px;
+}
+
 .content h1 {
-  text-align: center;
   font-size: 60px;
-  margin-bottom: 16px;
-  color: #400f00;
 }
 
 .info {
   display: flex;
+}
+.infoContent {
+  width: 40%;
+  margin: auto;
 }
 
 .info div p {
   font-size: 24px;
   text-align: justify;
   margin-right: 24px;
+  color: #161525;
 }
 
 .foto {

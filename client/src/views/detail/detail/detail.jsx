@@ -4,8 +4,8 @@ import Header from "../../../components/header/header";
 import Footer from "../../../components/footer/footer";
 import style from "../detail.module.css";
 import productosData from "../../../utils/patas.json";
-import fileteadasData from "../../../utils/fileteadas.json"; 
-import imagenPernil from "../../../img/banner11.jpg"; 
+import fileteadasData from "../../../utils/fileteadas.json";
+import imagenPernil from "../../../img/banner11.jpg";
 import tacosData from "../../../utils/tacos.json";
 import familiaresData from "../../../utils/familiares.json";
 import picadasData from "../../../utils/picadas.json";
@@ -13,7 +13,7 @@ import picadasData from "../../../utils/picadas.json";
 function Detail() {
   const { productName } = useParams();
   const [productInfo, setProductInfo] = useState(null);
-  const [isFromProductos, setIsFromProductos] = useState(false); 
+  const [isFromProductos, setIsFromProductos] = useState(false);
 
   useEffect(() => {
     const foundProductInProductos = productosData.find(
@@ -27,56 +27,51 @@ function Detail() {
     );
 
     const foundProductInTacos = tacosData.find(
-      (tacos) =>
-        tacos.nombre.toLowerCase().replace(/\s/g, "-") === productName
+      (tacos) => tacos.nombre.toLowerCase().replace(/\s/g, "-") === productName
     );
 
     const foundProductInFamiliares = familiaresData.find(
       (familiares) =>
-      familiares.nombre.toLowerCase().replace(/\s/g, "-") === productName
+        familiares.nombre.toLowerCase().replace(/\s/g, "-") === productName
     );
 
     const foundProductInPicadas = picadasData.find(
       (picadas) =>
-      picadas.nombre.toLowerCase().replace(/\s/g, "-") === productName
+        picadas.nombre.toLowerCase().replace(/\s/g, "-") === productName
     );
 
     if (foundProductInProductos) {
       setProductInfo(foundProductInProductos);
-      setIsFromProductos(true); 
+      setIsFromProductos(true);
     } else if (foundProductInFileteadas) {
       setProductInfo(foundProductInFileteadas);
-      setIsFromProductos(false); 
-    }
-    else if (foundProductInTacos) {
+      setIsFromProductos(false);
+    } else if (foundProductInTacos) {
       setProductInfo(foundProductInTacos);
-      setIsFromProductos(false); 
-    }
-    else if (foundProductInFamiliares) {
+      setIsFromProductos(false);
+    } else if (foundProductInFamiliares) {
       setProductInfo(foundProductInFamiliares);
-      setIsFromProductos(false); 
-    }
-    else if (foundProductInPicadas) {
+      setIsFromProductos(false);
+    } else if (foundProductInPicadas) {
       setProductInfo(foundProductInPicadas);
-      setIsFromProductos(false); 
+      setIsFromProductos(false);
     }
   }, [productName]);
-  
 
   const [selectedOption, setSelectedOption] = useState("10");
-  const [selectedPrice, setSelectedPrice] = useState(""); 
+  const [selectedPrice, setSelectedPrice] = useState("");
 
   const handleOptionChange = (e) => {
     const selectedValue = e.target.value;
-  
+
     if (productInfo && productInfo.porciones) {
       const prices = productInfo.porciones.reduce((acc, porcion) => {
         acc[porcion.cantidad.toString()] = `$${porcion.precio}`;
         return acc;
       }, {});
-  
+
       setSelectedOption(selectedValue);
-      setSelectedPrice(prices[selectedValue] || ""); 
+      setSelectedPrice(prices[selectedValue] || "");
     }
   };
 
@@ -102,7 +97,7 @@ function Detail() {
           <div>
             <div>{productInfo.nombre}</div>
             <div>
-              <img src={imagenPernil} alt="" /> 
+              <img src={imagenPernil} alt="" />
             </div>
           </div>
           <div>
@@ -111,20 +106,19 @@ function Detail() {
             </div>
             <div>
               <div>
-              <select
-  name=""
-  id=""
-  value={selectedOption}
-  onChange={handleOptionChange}
->
-  <option value="">Seleccione una cantidad</option>
-  {productInfo.porciones.map((porcion) => (
-    <option key={porcion.cantidad} value={porcion.cantidad}>
-      {porcion.cantidad}
-    </option>
-  ))}
-</select>
-
+                <select
+                  name=""
+                  id=""
+                  value={selectedOption}
+                  onChange={handleOptionChange}
+                >
+                  <option value="">Seleccione una cantidad</option>
+                  {productInfo.porciones.map((porcion) => (
+                    <option key={porcion.cantidad} value={porcion.cantidad}>
+                      {porcion.cantidad}
+                    </option>
+                  ))}
+                </select>
               </div>
               <div>
                 <p>{selectedPrice}</p>
@@ -136,8 +130,6 @@ function Detail() {
       ) : (
         <div>Cargando...</div>
       )}
-
-
 
       <Footer />
     </div>
