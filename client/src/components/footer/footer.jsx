@@ -14,7 +14,8 @@ function Footer() {
   return (
     <div className={style.container}>
       <div className={style.title}>
-        <h3>patasyperniles.com - Cocina Gourmet</h3>
+        <h3>patasyperniles.com - Gastronomía Gourmet</h3>
+        <p>Unidos por el buen gusto</p>
       </div>
       <div className={style.footerInfo}>
         <div className={style.infoLeft}>
