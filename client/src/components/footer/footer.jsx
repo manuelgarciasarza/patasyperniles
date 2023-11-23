@@ -25,11 +25,19 @@ function Footer() {
         </div>
         <div className={style.links}>
           <h5>Páginas Principales</h5>
-          <Link className={style.link}>Inicio</Link>
+          <Link Link to={"/"} className={style.link}>
+            Inicio
+          </Link>
           <Link className={style.link}>Productos Destacados</Link>
-          <Link className={style.link}>Tienda</Link>
-          <Link className={style.link}>Opinion</Link>
-          <Link className={style.link}>Contacto</Link>
+          <Link Link to={"/tienda"} className={style.link}>
+            Tienda
+          </Link>
+          <Link Link to={"/nosotros"} className={style.link}>
+            Nosotros
+          </Link>
+          <Link Link to={"/contacto"} className={style.link}>
+            Contacto
+          </Link>
         </div>
       </div>
       <div className={style.redes}>

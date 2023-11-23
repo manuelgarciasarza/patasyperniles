@@ -5,7 +5,7 @@ function AllProducts() {
   return (
     <div className={style.container}>
       <div className={style.content}>
-        <Link className={style.link}>
+        <Link Link to={"/tienda"} className={style.link}>
           <h2 className={style.title}>Todos nuestros Productos</h2>
         </Link>
       </div>
