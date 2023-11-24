@@ -135,19 +135,33 @@ function Detail() {
             </div>
           </div>
           <div className={style.extraInfo}>
-            <hr className={style.hr} />
-            <h2 className={style.h2}>Realización</h2>
-            <p>{productInfo.preparacion} </p>
+            {productInfo.preparacion !== null && (
+              <>
+                <hr className={style.hr} />
+                <h2 className={style.h2}>Realización</h2>
+                <p>{productInfo.preparacion}</p>
+              </>
+            )}
           </div>
+
           <div className={style.extraInfo}>
-            <hr className={style.hr} />
-            <h2 className={style.h2}>Presentación</h2>
-            <p>{productInfo.presentacion} </p>
+            {productInfo.presentacion !== null && (
+              <>
+                <hr className={style.hr} />
+                <h2 className={style.h2}>Presentación</h2>
+                <p>{productInfo.presentacion}</p>
+              </>
+            )}
           </div>
+
           <div className={style.extraInfo}>
-            <hr className={style.hr} />
-            <h2 className={style.h2}>Fileteador Contratado</h2>
-            <p>{productInfo.fileteador} </p>
+            {productInfo.fileteador !== null && (
+              <>
+                <hr className={style.hr} />
+                <h2 className={style.h2}>Fileteador Contratado</h2>
+                <p>{productInfo.fileteador}</p>
+              </>
+            )}
           </div>
         </div>
       ) : (

@@ -10,14 +10,13 @@ import tacosData from "../../utils/tacos.json";
 import familiaresData from "../../utils/familiares.json";
 import picadasData from "../../utils/picadas.json";
 
-
 function Tienda() {
   return (
     <div>
       <Header />
       <div className={style.container}>
         <div className={style.titulo}>
-          <h1>PATAS</h1>
+          <h1>PERNILES Y PATAS</h1>
         </div>
         <div className={style.cards}>
           {productosData.map((producto) => (
@@ -26,10 +25,12 @@ function Tienda() {
                 <img className={style.img} src={foto} alt="" />
               </div>
               <div className={style.nombre}>
-                <h2>{producto.nombre}</h2>
+                <h3>{producto.nombre}</h3>
               </div>
               <Link
-                to={`/detalle/${producto.nombre.toLowerCase().replace(/\s/g, "-")}`}
+                to={`/detalle/${producto.nombre
+                  .toLowerCase()
+                  .replace(/\s/g, "-")}`}
                 className={style.boton}
               >
                 <button className={style.btn}>Ver más</button>
@@ -37,24 +38,23 @@ function Tienda() {
             </div>
           ))}
         </div>
-
-        <br/> {/* ACÁ HAY UN BR, ESTO ES TAREA DEL GORDO CSS */}
-
+        <br /> {/* ACÁ HAY UN BR, ESTO ES TAREA DEL GORDO CSS */}
         <div className={style.titulo}>
           <h1>FILETEADAS</h1>
         </div>
         <div className={style.cards}>
-         
           {fileteadasData.map((fileteada) => (
             <div className={style.card} key={fileteada.id}>
               <div>
                 <img className={style.img} src={foto} alt="" />
               </div>
               <div className={style.nombre}>
-                <h2>{fileteada.nombre}</h2>
+                <h3>{fileteada.nombre}</h3>
               </div>
               <Link
-                to={`/detalle/${fileteada.nombre.toLowerCase().replace(/\s/g, "-")}`}
+                to={`/detalle/${fileteada.nombre
+                  .toLowerCase()
+                  .replace(/\s/g, "-")}`}
                 className={style.boton}
               >
                 <button className={style.btn}>Ver más</button>
@@ -62,82 +62,84 @@ function Tienda() {
             </div>
           ))}
         </div>
-
-        <br/> {/* siguen los br */}
-
+        <br /> {/* siguen los br */}
         <div className={style.titulo}>
           <h1>TACOS</h1>
         </div>
         <div className={style.cards}>
-         
-        {tacosData.map((taco) => (
-  <div className={style.card} key={taco.id}>
-    <div>
-      <img className={style.img} src={foto} alt="" />
-    </div>
-    <div className={style.nombre}>
-      <h2>{taco.nombre }</h2>
-    </div>
-    <Link
-      to={`/detalle/${taco.nombre ? taco.nombre.toLowerCase().replace(/\s/g, "-") : ""}`}
-      className={style.boton}
-    >
-      <button className={style.btn}>Ver más</button>
-    </Link>
-  </div>
-))}
+          {tacosData.map((taco) => (
+            <div className={style.card} key={taco.id}>
+              <div>
+                <img className={style.img} src={foto} alt="" />
+              </div>
+              <div className={style.nombre}>
+                <h3>{taco.nombre}</h3>
+              </div>
+              <Link
+                to={`/detalle/${
+                  taco.nombre
+                    ? taco.nombre.toLowerCase().replace(/\s/g, "-")
+                    : ""
+                }`}
+                className={style.boton}
+              >
+                <button className={style.btn}>Ver más</button>
+              </Link>
+            </div>
+          ))}
         </div>
-
-        <br/> {/* otro más */}
-
+        <br /> {/* otro más */}
         <div className={style.titulo}>
-          <h1>FAMILIARES</h1>
+          <h1>OPCIONES FAMILIARES</h1>
         </div>
         <div className={style.cards}>
-         
-        {familiaresData.map((familiares) => (
-  <div className={style.card} key={familiares.id}>
-    <div>
-      <img className={style.img} src={foto} alt="" />
-    </div>
-    <div className={style.nombre}>
-      <h2>{familiares.nombre }</h2>
-    </div>
-    <Link
-      to={`/detalle/${familiares.nombre ? familiares.nombre.toLowerCase().replace(/\s/g, "-") : ""}`}
-      className={style.boton}
-    >
-      <button className={style.btn}>Ver más</button>
-    </Link>
-  </div>
-))}
+          {familiaresData.map((familiares) => (
+            <div className={style.card} key={familiares.id}>
+              <div>
+                <img className={style.img} src={foto} alt="" />
+              </div>
+              <div className={style.nombre}>
+                <h3>{familiares.nombre}</h3>
+              </div>
+              <Link
+                to={`/detalle/${
+                  familiares.nombre
+                    ? familiares.nombre.toLowerCase().replace(/\s/g, "-")
+                    : ""
+                }`}
+                className={style.boton}
+              >
+                <button className={style.btn}>Ver más</button>
+              </Link>
+            </div>
+          ))}
         </div>
-
-        <br/> {/* EL ÚLTIMO CON ESTE NO JODO MÁS */}
-
+        <br /> {/* EL ÚLTIMO CON ESTE NO JODO MÁS */}
         <div className={style.titulo}>
           <h1>PICADAS</h1>
         </div>
         <div className={style.cards}>
-         
-        {picadasData.map((picadas) => (
-  <div className={style.card} key={picadas.id}>
-    <div>
-      <img className={style.img} src={foto} alt="" />
-    </div>
-    <div className={style.nombre}>
-      <h2>{picadas.nombre }</h2>
-    </div>
-    <Link
-      to={`/detalle/${picadas.nombre ? picadas.nombre.toLowerCase().replace(/\s/g, "-") : ""}`}
-      className={style.boton}
-    >
-      <button className={style.btn}>Ver más</button>
-    </Link>
-  </div>
-))}
+          {picadasData.map((picadas) => (
+            <div className={style.card} key={picadas.id}>
+              <div>
+                <img className={style.img} src={foto} alt="" />
+              </div>
+              <div className={style.nombre}>
+                <h3>{picadas.nombre}</h3>
+              </div>
+              <Link
+                to={`/detalle/${
+                  picadas.nombre
+                    ? picadas.nombre.toLowerCase().replace(/\s/g, "-")
+                    : ""
+                }`}
+                className={style.boton}
+              >
+                <button className={style.btn}>Ver más</button>
+              </Link>
+            </div>
+          ))}
         </div>
-
       </div>
       <Footer />
     </div>
