@@ -1,0 +1,69 @@
+.container {
+  width: 80%;
+  margin: 20px auto;
+}
+
+.content {
+  display: flex;
+}
+
+.title {
+  margin-bottom: 20px;
+  font-size: 50px;
+  color: #161525;
+}
+
+.info {
+  margin-left: 40px;
+}
+
+.descripcion {
+  text-align: justify;
+  height: 240px;
+  color: #161525;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.extraInfo {
+  text-align: justify;
+  margin-top: 30px;
+  color: #161525;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.img {
+  border: solid 4px #672b29;
+  width: 38rem;
+}
+
+.hr {
+  border-color: #672b29;
+}
+
+.h2 {
+  margin: 10px 0px;
+}
+
+.cantidad,
+.precio {
+  display: flex;
+  color: #161525;
+  gap: 10px;
+  font-size: 18px;
+  font-weight: 500;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0);
+  color: #672b29;
+  border-color: #672b29;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #672b29;
+  color: #fff;
+}

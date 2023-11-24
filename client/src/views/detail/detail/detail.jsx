@@ -95,36 +95,59 @@ function Detail() {
       {productInfo ? (
         <div className={style.container}>
           <div>
-            <div>{productInfo.nombre}</div>
-            <div>
-              <img src={imagenPernil} alt="" />
+            <h1 className={style.title}>{productInfo.nombre}</h1>
+          </div>
+          <div className={style.content}>
+            <div className={style.imgCont}>
+              <img className={style.img} src={imagenPernil} alt="" />
+            </div>{" "}
+            <div className={style.info}>
+              <div className={style.descripcion}>
+                <p>{productInfo.descripcion}</p>
+              </div>
+              <div>
+                <div className={style.cantidad}>
+                  <p>Cantidad de comensales:</p>
+                  <select
+                    name=""
+                    id=""
+                    value={selectedOption}
+                    onChange={handleOptionChange}
+                  >
+                    <option value="">Seleccione una cantidad</option>
+                    {productInfo.porciones.map((porcion) => (
+                      <option key={porcion.cantidad} value={porcion.cantidad}>
+                        {porcion.cantidad}
+                      </option>
+                    ))}
+                  </select>
+                </div>
+                <div className={style.precio}>
+                  <p>Precio:</p>
+                  <p>{selectedPrice}</p>
+                </div>
+                <div>
+                  <button className={style.btn} onClick={setCarrito}>
+                    Agregar al Carrito
+                  </button>
+                </div>
+              </div>
             </div>
           </div>
-          <div>
-            <div>
-              <p>{productInfo.descripcion}</p>
-            </div>
-            <div>
-              <div>
-                <select
-                  name=""
-                  id=""
-                  value={selectedOption}
-                  onChange={handleOptionChange}
-                >
-                  <option value="">Seleccione una cantidad</option>
-                  {productInfo.porciones.map((porcion) => (
-                    <option key={porcion.cantidad} value={porcion.cantidad}>
-                      {porcion.cantidad}
-                    </option>
-                  ))}
-                </select>
-              </div>
-              <div>
-                <p>{selectedPrice}</p>
-                <button onClick={setCarrito}>Agregar al Carrito</button>
-              </div>
-            </div>
+          <div className={style.extraInfo}>
+            <hr className={style.hr} />
+            <h2 className={style.h2}>Realización</h2>
+            <p>{productInfo.preparacion} </p>
+          </div>
+          <div className={style.extraInfo}>
+            <hr className={style.hr} />
+            <h2 className={style.h2}>Presentación</h2>
+            <p>{productInfo.presentacion} </p>
+          </div>
+          <div className={style.extraInfo}>
+            <hr className={style.hr} />
+            <h2 className={style.h2}>Fileteador Contratado</h2>
+            <p>{productInfo.fileteador} </p>
           </div>
         </div>
       ) : (
