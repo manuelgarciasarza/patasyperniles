@@ -13,10 +13,7 @@ function BestProducts() {
             <img className={style.img} src={foto} alt="" />
           </div>
           <div className={style.nombre}>
-            <h2>NOMBRE</h2>
-          </div>
-          <div className={style.desc}>
-            <h3>Descripción</h3>
+            <h3>PERNILES Y PATAS</h3>
           </div>
         </div>
 
@@ -25,10 +22,7 @@ function BestProducts() {
             <img className={style.img} src={foto} alt="" />
           </div>
           <div className={style.nombre}>
-            <h2>NOMBRE</h2>
-          </div>
-          <div className={style.desc}>
-            <h3>Descripción</h3>
+            <h3>FILETEADAS</h3>
           </div>
         </div>
 
@@ -37,10 +31,7 @@ function BestProducts() {
             <img className={style.img} src={foto} alt="" />
           </div>
           <div className={style.nombre}>
-            <h2>NOMBRE</h2>
-          </div>
-          <div className={style.desc}>
-            <h3>Descripción</h3>
+            <h3>TACOS</h3>
           </div>
         </div>
 
@@ -49,10 +40,7 @@ function BestProducts() {
             <img className={style.img} src={foto} alt="" />
           </div>
           <div className={style.nombre}>
-            <h2>NOMBRE</h2>
-          </div>
-          <div className={style.desc}>
-            <h3>Descripción</h3>
+            <h3>OPCIONES FAMILIARES</h3>
           </div>
         </div>
       </div>
