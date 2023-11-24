@@ -3,6 +3,7 @@ import style from "./contactHome.module.css";
 function ContactHome() {
   return (
     <div>
+       <form ref={form} onSubmit={sendEmail}> 
       <div className={style.title}>
         <h2>Contactanos</h2>
       </div>
@@ -13,6 +14,7 @@ function ContactHome() {
           <textarea className={style.text} placeholder="Mensaje"></textarea>
         </form>
       </div>
+      </form>
     </div>
   );
 }
