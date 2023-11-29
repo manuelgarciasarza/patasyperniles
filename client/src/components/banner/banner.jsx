@@ -1,8 +1,4 @@
-//imagenes
-/* import bannerUno from "../../img/bannerUno.jpg";import bannerDos from "../../img/bannerDos.jpg";
-
- 
- */ import bannerCuatro from "../../img/bannerCuatro.jpg";
+import bannerCuatro from "../../img/bannerCuatro.jpg";
 import bannerCinco from "../../img/bannerCinco.jpg";
 import bannerSeis from "../../img/bannerSeis.jpg";
 import bannerSiete from "../../img/bannerSiete.jpg";
