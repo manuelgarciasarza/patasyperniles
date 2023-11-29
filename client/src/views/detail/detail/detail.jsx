@@ -1,11 +1,12 @@
 import React, { useState, useEffect } from "react";
 import { useParams } from "react-router-dom";
+import { useDispatch } from "react-redux";
 import Header from "../../../components/header/header";
+import { addToCart } from "../../../redux/actions";
 import Footer from "../../../components/footer/footer";
 import style from "../detail.module.css";
 import productosData from "../../../utils/patas.json";
 import fileteadasData from "../../../utils/fileteadas.json";
-import imagenPernil from "../../../img/banner11.jpg";
 import tacosData from "../../../utils/tacos.json";
 import familiaresData from "../../../utils/familiares.json";
 import picadasData from "../../../utils/picadas.json";
@@ -14,6 +15,7 @@ function Detail() {
   const { productName } = useParams();
   const [productInfo, setProductInfo] = useState(null);
   const [isFromProductos, setIsFromProductos] = useState(false);
+  const dispatch = useDispatch();
 
   useEffect(() => {
     const foundProductInProductos = productosData.find(
@@ -57,8 +59,8 @@ function Detail() {
       setIsFromProductos(false);
     }
   }, [productName]);
-
-  const [selectedOption, setSelectedOption] = useState("10");
+  console.log(productInfo);
+  const [selectedOption, setSelectedOption] = useState("");
   const [selectedPrice, setSelectedPrice] = useState("");
 
   const handleOptionChange = (e) => {
@@ -75,18 +77,8 @@ function Detail() {
     }
   };
 
-  const setCarrito = () => {
-    try {
-      const newProduct = {
-        name: productInfo ? productInfo.nombre : "",
-        amount: selectedOption,
-        price: selectedPrice,
-      };
-      localStorage.setItem("productInCart", JSON.stringify(newProduct));
-    } catch (error) {
-      console.log(error);
-    }
-    console.log(JSON.parse(localStorage.getItem("productInCart")));
+  const handleAddToCart = () => {
+    dispatch(addToCart(productInfo, selectedOption, selectedPrice));
   };
 
   return (
@@ -99,8 +91,8 @@ function Detail() {
           </div>
           <div className={style.content}>
             <div className={style.imgCont}>
-              <img className={style.img} src={imagenPernil} alt="" />
-            </div>{" "}
+              <img className={style.img} src={productInfo.imagen} alt="" />
+            </div>
             <div className={style.info}>
               <div className={style.descripcion}>
                 <p>{productInfo.descripcion}</p>
@@ -127,7 +119,7 @@ function Detail() {
                   <p>{selectedPrice}</p>
                 </div>
                 <div>
-                  <button className={style.btn} onClick={setCarrito}>
+                  <button className={style.btn} onClick={handleAddToCart}>
                     Agregar al Carrito
                   </button>
                 </div>

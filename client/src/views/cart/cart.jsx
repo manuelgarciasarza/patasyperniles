@@ -1,13 +1,17 @@
+import React from "react";
+import { useSelector, useDispatch } from "react-redux";
+import { deleteFromCart } from "../../redux/actions"; // Asegúrate de importar la acción correctamente
+
 import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
+import style from "./cart.module.css";
 
 const ShoppingCart = () => {
-  const pernilDeCerdo = JSON.parse(localStorage.getItem("pernilDeCerdo"));
-  const pataDeTernera = JSON.parse(localStorage.getItem("pataDeTernera"));
-  const combinada = JSON.parse(localStorage.getItem("combinada"));
+  const carrito = useSelector((state) => state.carrito);
+  const dispatch = useDispatch();
 
   const prepareWhatsAppMessage = () => {
-    const message = `Hola, quiero comprar:\n\n${pernilDeCerdo.name} - ${pernilDeCerdo.amount} personas - ${pernilDeCerdo.price}`;
+    const message = `Hola, quiero comprar:\n\n`;
     return encodeURIComponent(message);
   };
 
@@ -20,38 +24,29 @@ const ShoppingCart = () => {
   return (
     <div>
       <Header />
-      <h2>Carrito de Compras</h2>
-      {pernilDeCerdo && (
-        <div>
-          <p>{pernilDeCerdo.name || "Nombre no disponible"} </p>
-          <p>
-            {pernilDeCerdo.price
-              ? `$${pernilDeCerdo.price}`
-              : "Precio no disponible"}{" "}
-          </p>
-        </div>
-      )}
-
-      {pataDeTernera && (
-        <div>
-          <p>{pataDeTernera.name || "Nombre no disponible"} </p>
-          <p>
-            {pataDeTernera.price
-              ? `$${pataDeTernera.price}`
-              : "Precio no disponible"}{" "}
-          </p>
-        </div>
-      )}
-
-      {combinada && (
-        <div>
-          <p>{combinada.name || "Nombre no disponible"} </p>
-          <p>
-            {combinada.price ? `$${combinada.price}` : "Precio no disponible"}{" "}
-          </p>
-        </div>
-      )}
-      <button onClick={openWhatsApp}>Hacer el pedido</button>
+      <div className={style.container}>
+        <h2>Carrito de Compras</h2>
+        {carrito.length > 0 ? (
+          carrito.map((item) => (
+            <div key={item.product.id} className={style.cart}>
+              <p>{item.product.nombre}</p>
+              <p>Cantidad: {item.quantity}</p>
+              <p>Precio: {item.price}</p>
+              <button
+                className={style.btn}
+                onClick={() => dispatch(deleteFromCart(item.product.id))}
+              >
+                X
+              </button>
+            </div>
+          ))
+        ) : (
+          <p>No hay productos en el carrito</p>
+        )}
+        <button className={style.btn} onClick={openWhatsApp}>
+          Hacer el pedido
+        </button>
+      </div>
       <Footer />
     </div>
   );

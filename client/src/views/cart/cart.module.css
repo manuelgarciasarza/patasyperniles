@@ -1,0 +1,30 @@
+.container {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.cart {
+  display: flex;
+  background-color: beige;
+  width: 70%;
+  justify-content: space-between;
+  height: 40px;
+  margin: 10px 0px;
+  border-radius: 10px;
+  align-items: center;
+  padding: 0px 20px;
+}
+
+.btn {
+  background-color: rgba(0, 0, 0, 0);
+  color: #672b29;
+  border-color: #672b29;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #672b29;
+  color: #fff;
+}
