@@ -79,7 +79,9 @@ function Detail() {
 
   const handleAddToCart = () => {
     dispatch(addToCart(productInfo, selectedOption, selectedPrice));
+    alert('¡El producto se ha añadido exitosamente al carrito!');
   };
+  
 
   return (
     <div>

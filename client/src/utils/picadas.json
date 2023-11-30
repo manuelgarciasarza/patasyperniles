@@ -28,6 +28,10 @@
         "cantidad": "15 a 20",
         "precio": 44500
       }
+    ],
+    "extras": [
+      "Extra 1: Descripción del extra 1...",
+      "Extra 2: Descripción del extra 2..."
     ]
   }
 ]

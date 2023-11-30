@@ -8,20 +8,24 @@
     "fileteador": null,
     "imagen": "https://lh3.googleusercontent.com/pw/ADCreHdgJJMJ3qnC4YVhcoy6LVWroid4-lPiaoZ0pdTQdNRDL_uXTWFrqsQsDLCZD3P11NePveDCJ8d8_CYOacD1ANwA8oNGTHsDyHxUisll8fbA_RsZRFJ679RT2Hv40LF0ldbcFjYYBgR8EZnvBU8AoIJR=w747-h607-s-no-gm?authuser=0",
     "porciones": [
-      {
-        "cantidad": 2,
-        "precio": 9200
-      },
-      {
-        "cantidad": 4,
-        "precio": 13500
-      },
-      {
-        "cantidad": 8,
-        "precio": 25000
-      }
-    ]
-  },
+    {
+      "cantidad": 2,
+      "precio": 9200
+    },
+    {
+      "cantidad": 4,
+      "precio": 13500
+    },
+    {
+      "cantidad": 8,
+      "precio": 25000
+    }
+  ],
+  "extras": [
+    "Extra 1: Descripción del extra 1...",
+    "Extra 2: Descripción del extra 2..."
+  ]
+},
   {
     "id": 7,
     "nombre": "Cerdo Desmechado",
@@ -43,6 +47,10 @@
         "cantidad": 8,
         "precio": 24200
       }
+    ],
+    "extras": [
+      "Extra 1: Descripción del extra 1...",
+      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
@@ -62,6 +70,10 @@
         "cantidad": 4,
         "precio": 12500
       }
+    ],
+    "extras": [
+      "Extra 1: Descripción del extra 1...",
+      "Extra 2: Descripción del extra 2..."
     ]
   }
 ]
