@@ -12,6 +12,10 @@
         "cantidad": "6 a 8",
         "precio": 32700
       }
+    ],
+    "extras": [
+      "Extra 1: Descripción del extra 1...",
+      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
@@ -31,6 +35,10 @@
         "cantidad": "4 a 5",
         "precio": 16800
       }
+    ],
+    "extras": [
+      "Extra 1: Descripción del extra 1...",
+      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
@@ -50,6 +58,10 @@
         "cantidad": "6 a 7",
         "precio": 32500
       }
+    ],
+    "extras": [
+      "Extra 1: Descripción del extra 1...",
+      "Extra 2: Descripción del extra 2..."
     ]
   }
 ]
