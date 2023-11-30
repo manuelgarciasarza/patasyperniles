@@ -1,0 +1,19 @@
+.container {
+  width: 100%;
+  color: #161525;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+}
+
+.count {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 6px;
+}
+
+.hr {
+  border-color: #672b29;
+}
