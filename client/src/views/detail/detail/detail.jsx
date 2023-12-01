@@ -1,5 +1,5 @@
 import React, { useState, useEffect } from "react";
-import { useParams } from "react-router-dom";
+import { useParams, useNavigate } from "react-router-dom";
 import { useDispatch } from "react-redux";
 import Header from "../../../components/header/header";
 import { addToCart } from "../../../redux/actions";
@@ -16,6 +16,7 @@ function Detail() {
   const [productInfo, setProductInfo] = useState(null);
   const [isFromProductos, setIsFromProductos] = useState(false);
   const dispatch = useDispatch();
+  const navigate = useNavigate();
 
   useEffect(() => {
     const foundProductInProductos = productosData.find(
@@ -78,14 +79,22 @@ function Detail() {
   };
 
   const handleAddToCart = () => {
+    if (selectedOption === "") {
+      alert("Por favor, seleccione una cantidad antes de agregar al carrito");
+      return;
+    }
+  
     dispatch(addToCart(productInfo, selectedOption, selectedPrice));
-    alert('¡El producto se ha añadido exitosamente al carrito!');
+    alert("¡El producto se ha añadido exitosamente al carrito!");
   };
   
 
   return (
     <div>
       <Header />
+       <button className={style.btn} onClick={() => navigate("/tienda")}>
+          <span>&#8592;</span> Volver
+        </button>
       {productInfo ? (
         <div className={style.container}>
           <div>

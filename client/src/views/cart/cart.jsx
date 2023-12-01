@@ -12,8 +12,81 @@ const ShoppingCart = () => {
   const dispatch = useDispatch();
   const navigate = useNavigate();
 
+  const calcularTotalCarrito = () => {
+    const total = carrito.reduce((total, item) => {
+      const formattedPrice = item.price.replace(/\D/g, ''); 
+      const itemPrice = parseFloat(formattedPrice);
+      return isNaN(itemPrice) ? total : total + itemPrice;
+    }, 0);
+  
+    return total;
+  };
+
+  const [extrasTotal, setExtrasTotal] = useState(0);
+  const [formData, setFormData] = useState({
+    nombre: "",
+    apellido: "",
+    telefono: "",
+    mail: "",
+    direccion: "",
+    ciudad: "",
+  });
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleSubmit = (e) => {
+    e.preventDefault();
+  
+    if (carrito.length === 0) {
+      alert("Agrega productos al carrito antes de realizar un pedido");
+      return;
+    }
+  
+    const requiredFields = ["nombre", "telefono", "mail", "direccion", "ciudad"];
+    const isValid = requiredFields.every((field) => formData[field].trim() !== "");
+  
+    if (isValid) {
+      const productsList = carrito.map((item, index) => {
+        return `${index + 1}. ${item.product.nombre} - Precio: ${item.price}`;
+      });
+  
+      const totalPrice = calcularTotalCarrito() + extrasTotal;
+  
+      let message = `Hola, quiero comprar:\n${productsList.join('\n')}\n\nPrecio final: $${totalPrice}\n`;
+      
+      if (formData.extras) {
+        message += "\nExtras:\n";
+        formData.extras.forEach((extra, index) => {
+          message += `${index + 1}. ${extra.nombre} - Cantidad: ${extra.cantidad}, Precio: ${extra.precio}\n`;
+        });
+      }
+
+      message += `\nNombre: ${formData.nombre}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.mail}\nDirección: ${formData.direccion}\nCiudad: ${formData.ciudad}`;
+  
+      const encodedMessage = encodeURIComponent(message);
+  
+      const phoneNumber = "+5492966692490";
+      window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+    } else {
+      alert("Por favor, completa todos los campos requeridos");
+    }
+  };
+  
+  
+
+  const handleExtrasTotal = (total) => {
+    setExtrasTotal(total);
+  };
+  
+
   const prepareWhatsAppMessage = () => {
-    const message = `Hola, quiero comprar:\n\n`;
+    const message = `Hola, quiero comprar:\n\nNombre: ${formData.nombre}\nApellido: ${formData.apellido}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.mail}\nDirección: ${formData.direccion}\nCiudad: ${formData.ciudad}`;
     return encodeURIComponent(message);
   };
 
@@ -48,16 +121,49 @@ const ShoppingCart = () => {
                 </button>
               </div>
             ))}
-            <div>
-              <Extras />
-            </div>
+           <div className={style.total}>
+           <p>Subtotal carrito: ${calcularTotalCarrito()}</p>
+           <Extras
+    onExtrasTotal={handleExtrasTotal}
+    calculateTotalCarrito={calcularTotalCarrito}
+    extrasTotal={extrasTotal} 
+  />
+        <p>Total de extras: ${extrasTotal}</p>
+        <p>Precio final: ${calcularTotalCarrito() + extrasTotal}</p>
+      </div>
           </>
         ) : (
           <p>No hay productos en el carrito</p>
         )}
-        <button className={style.btn} onClick={openWhatsApp}>
-          Hacer el pedido
-        </button>
+
+<form onSubmit={handleSubmit}>
+  <div>
+    <div>
+      <label htmlFor="nombre">Nombre y apellido:</label>
+      <input type="text" id="nombre" name="nombre" value={formData.nombre} onChange={handleInputChange} required />
+    </div>
+    <div>
+      <label htmlFor="telefono">Número de teléfono:</label>
+      <input type="text" id="telefono" name="telefono" value={formData.telefono} onChange={handleInputChange} required />
+    </div>
+    <div>
+      <label htmlFor="mail">Correo:</label>
+      <input type="text" id="mail" name="mail" value={formData.mail} onChange={handleInputChange} required />
+    </div>
+    <div>
+      <label htmlFor="direccion">Dirección:</label>
+      <input type="text" id="direccion" name="direccion" value={formData.direccion} onChange={handleInputChange} required />
+    </div>
+    <div>
+      <label htmlFor="ciudad">Ciudad:</label>
+      <input type="text" id="ciudad" name="ciudad" value={formData.ciudad} onChange={handleInputChange} required />
+    </div>
+  </div>
+  <button type="submit" className={style.btn} >
+    Hacer el pedido
+  </button>
+</form>
+
       </div>
       <Footer />
     </div>
