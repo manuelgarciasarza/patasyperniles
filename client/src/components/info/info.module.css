@@ -28,7 +28,7 @@
   height: 350px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 460px) {
   .container {
     display: grid;
     grid-template-columns: repeat(2, 1fr);

@@ -10,7 +10,7 @@
   font-weight: 400px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 460px) {
   .container {
     gap: 4px;
   }

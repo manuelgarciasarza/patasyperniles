@@ -16,7 +16,7 @@
   border-radius: 20px;
 }
 
-@media (max-width: 390px) {
+@media (max-width: 460px) {
   .container {
     margin: 30px;
   }

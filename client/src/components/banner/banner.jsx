@@ -1,7 +1,6 @@
 import bannerCuatro from "../../img/bannerCuatro.jpg";
 import bannerCinco from "../../img/bannerCinco.jpg";
 import bannerSeis from "../../img/bannerSeis.jpg";
-import bannerSiete from "../../img/bannerSiete.jpg";
 import bannerTres from "../../img/bannerTres.jpg";
 
 import style from "./banner.module.css";
@@ -25,7 +24,6 @@ function Banner() {
       <img className={style.img} src={bannerCuatro} alt="" />
       <img className={style.img} src={bannerCinco} alt="" />
       <img className={style.img} src={bannerSeis} alt="" />
-      <img className={style.img} src={bannerSiete} alt="" />
     </Carousel>
   );
 }
