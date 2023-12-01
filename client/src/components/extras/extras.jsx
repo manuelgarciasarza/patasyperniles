@@ -25,10 +25,15 @@ export const EXTRA_PRICES = {
 };
 
 const ExtraItem = ({ name, count, setCount }) => {
+  const [incremented, setIncremented] = useState(false);
+
   const handleIncrement = () => {
     if (name === "Figazas de manteca x25") {
       setCount(count + 25);
-    } else {
+    } else if (name === "Servicio de filetedeador x2HS" && !incremented) {
+      setCount(count + 1);
+      setIncremented(true);
+    } else if (name !== "Servicio de filetedeador x2HS") {
       setCount(count + 1);
     }
   };
@@ -37,7 +42,10 @@ const ExtraItem = ({ name, count, setCount }) => {
     if (count > 0) {
       if (name === "Figazas de manteca x25" && count >= 25) {
         setCount(count - 25);
-      } else {
+      } else if (name === "Servicio de filetedeador x2HS" && incremented) {
+        setCount(count - 1);
+        setIncremented(false);
+      } else if (name !== "Servicio de filetedeador x2HS") {
         setCount(count - 1);
       }
     }
@@ -48,9 +56,11 @@ const ExtraItem = ({ name, count, setCount }) => {
   return (
     <div>
       <div className={style.items}>
-      <p>{name} - Precio: ${price}</p>
+        <p>{name} - Precio: ${price}</p>
         <div className={style.count}>
-          <button onClick={handleIncrement}>+</button>
+          <button onClick={handleIncrement} disabled={incremented && name === "Servicio de filetedeador x2HS"}>
+            +
+          </button>
           <p>{count}</p>
           <button onClick={handleDecrement}>-</button>
         </div>
@@ -58,15 +68,9 @@ const ExtraItem = ({ name, count, setCount }) => {
       <hr className={style.hr} />
     </div>
   );
-}
+};
 
-function Extras({
-  onExtrasTotal,
-  calculateTotalCarrito,
-  extrasTotal,
-  setExtras,
-}) {
-
+function Extras({ onExtrasTotal, setExtras }) {
   const [counts, setCounts] = useState({});
 
   const extraItems = [
@@ -98,7 +102,6 @@ function Extras({
     for (const item in counts) {
       if (item === "Figazas de manteca x25") {
         total += Math.floor(counts[item] / 25) * EXTRA_PRICES[item];
-      
       } else {
         total += counts[item] * EXTRA_PRICES[item];
       }
@@ -116,15 +119,18 @@ function Extras({
       <div>
         <h2>Extras</h2>
       </div>
-      {extraItems.map((item, index) => (
-        <ExtraItem
-          key={index}
-          name={item}
-          count={counts[item] || 0}
-          setCount={(count) => setCounts({ ...counts, [item]: count })}
-        />
+      {Object.keys(EXTRA_PRICES).map((item, index) => (
+        <div key={index}>
+          <ExtraItem
+            name={item}
+            count={counts[item] || 0}
+            setCount={(count) => setCounts({ ...counts, [item]: count })}
+          />
+          <hr className={style.hr} />
+        </div>
       ))}
     </div>
   );
 }
+
 export default Extras;

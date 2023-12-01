@@ -48,77 +48,77 @@ const ShoppingCart = () => {
   };
 
   const handleSubmit = (e) => {
-    e.preventDefault();
-  
-    if (carrito.length === 0) {
-      alert("Agrega productos al carrito antes de realizar un pedido");
-      return;
-    }
-  
-    const requiredFields = [
-      "nombre",
-      "telefono",
-      "mail",
-      "direccion",
-      "ciudad",
-    ];
-    const isValid = requiredFields.every(
-      (field) => formData[field].trim() !== ""
-    );
-  
-    if (isValid) {
-      const productsList = carrito.map((item, index) => {
-        return `${index + 1}. ${item.product.nombre} - Precio: ${item.price}`;
-      });
-  
-      const totalPrice = calcularTotalCarrito() + extrasTotal;
-  
-      let message = `Hola, quiero hacer un pedido de:\n${productsList.join(
-        "\n"
-      )}\n`;
-  
-      message += "----------------------------------------\n";
-      message += "Extras:\n";
-      for (const extra in selectedExtras) {
-        const count = selectedExtras[extra];
-        const price = EXTRA_PRICES[extra] * count;
-  
-        if (count !== 0 && price !== 0) {
-          if (extra === "Figazas de manteca") {
-            const specialPriceCount = Math.floor(count / 25);
-            const remainingCount = count % 25;
-            let priceDetails = `Figazas de manteca - Cantidad: ${count}, Precio: `;
-            for (let i = 1; i <= specialPriceCount; i++) {
-              priceDetails += `$${i * 500} (cantidad: ${i * 25})\n`;
-            }
-            if (remainingCount > 0) {
-              priceDetails += `${count}: $${EXTRA_PRICES[extra] * remainingCount} (cantidad: ${remainingCount})\n`;
-            }
-            message += `${priceDetails}\n----------------------------------------\n`;
-          } else {
-            message += `${extra} - Cantidad: ${count}, Precio: ${price}\n`;
-          }
-        }
-      }
-  
-      message += `----------------------------------------
-      *PRECIO FINAL: $${totalPrice}*\n`;
-      message += "----------------------------------------\n";
-      message += `Nombre y apellido: ${formData.nombre}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.mail}\nDirección: ${formData.direccion}\nCiudad: ${formData.ciudad}\n`;
-      message += "----------------------------------------\n";
-      message += "Datos de facturación:\nCBU: 0000003100040860736859\nALIAS: patasyperniles.com\n";
-  
-      const encodedMessage = encodeURIComponent(message);
-  
-      const phoneNumber = "+5492966692490";
-      window.open(
-        `https://wa.me/${phoneNumber}?text=${encodedMessage}`,
-        "_blank"
-      );
+  e.preventDefault();
+
+  if (carrito.length === 0) {
+    alert("Agrega productos al carrito antes de realizar un pedido");
+    return;
+  }
+
+  const requiredFields = [
+    "nombre",
+    "telefono",
+    "mail",
+    "direccion",
+    "ciudad",
+  ];
+  const isValid = requiredFields.every(
+    (field) => formData[field].trim() !== ""
+  );
+
+  if (isValid) {
+    const productsList = carrito.map((item, index) => {
+      return `${index + 1}. ${item.product.nombre} - Precio: ${item.price}`;
+    });
+
+    const totalPrice = calcularTotalCarrito() + extrasTotal;
+
+    let message = `Hola, quiero hacer un pedido de:\n${productsList.join("\n")}\n`;
+    message += "----------------------------------------\n";
+    message += "Extras:\n";
+
+
+let filetedeadorSelected = false;
+let filetedeadorPrice = 0;
+
+for (const extra in selectedExtras) {
+  const count = selectedExtras[extra];
+  const price = EXTRA_PRICES[extra] * count;
+
+  if (count !== 0 && price !== 0) {
+    if (extra === "Figazas de manteca") {
+    } else if (extra === "Servicio de filetedeador x2HS") {
+      filetedeadorSelected = count > 0;
+      filetedeadorPrice = price;
     } else {
-      alert("Por favor, completa todos los campos requeridos");
+      message += `${extra} - Cantidad: ${count}, Precio: ${price}\n`;
     }
-  };
+  }
+}
+
+if (filetedeadorSelected) {
+  message += `Servicio de filetedeador x2HS - Sí, Precio: $${filetedeadorPrice}\n`;
+} else {
+  message += `Servicio de filetedeador x2HS - No\n`;
+}
+
+    message += `----------------------------------------
+    *PRECIO FINAL: $${totalPrice}*\n`;
+    message += "----------------------------------------\n";
+    message += `Nombre y apellido: ${formData.nombre}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.mail}\nDirección: ${formData.direccion}\nCiudad: ${formData.ciudad}\n`;
+    message += "----------------------------------------\n";
+    message += "Datos de facturación:\nCBU: 0000003100040860736859\nALIAS: patasyperniles.com\n";
+
+    const encodedMessage = encodeURIComponent(message);
+
+    const phoneNumber = "+5492966692490";
+    window.open(`https://wa.me/${phoneNumber}?text=${encodedMessage}`, "_blank");
+  } else {
+    alert("Por favor, completa todos los campos requeridos");
+  }
+};
+
+  
   
 
   const handleExtrasTotal = (total) => {
