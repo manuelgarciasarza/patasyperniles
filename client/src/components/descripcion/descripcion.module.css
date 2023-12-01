@@ -34,9 +34,32 @@
   text-align: justify;
   margin-right: 24px;
   color: #161525;
+  font-family: "Times New Roman", Times, serif;
 }
 
 .foto {
   height: 360px;
   width: 400px;
+}
+
+@media (max-width: 460px) {
+  .info div p {
+    font-size: 20px;
+    text-align: justify;
+    margin-right: 0;
+    font-family: "Times New Roman", Times, serif;
+  }
+  .infoContent {
+    width: 90%;
+    margin: auto;
+  }
+  .title {
+    height: 70px;
+    margin-bottom: 20px;
+    margin-top: 20px;
+  }
+
+  .content h1 {
+    font-size: 24px;
+  }
 }
