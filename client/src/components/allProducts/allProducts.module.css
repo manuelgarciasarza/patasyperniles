@@ -15,3 +15,19 @@
   background-color: #672b29;
   border-radius: 20px;
 }
+
+@media (max-width: 390px) {
+  .container {
+    margin: 30px;
+  }
+  .link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+  }
+  .content {
+    padding: 5px 15px;
+    background-color: #672b29;
+    border-radius: 20px;
+  }
+}
