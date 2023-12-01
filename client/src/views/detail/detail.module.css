@@ -67,3 +67,26 @@
   background-color: #672b29;
   color: #fff;
 }
+
+@media (max-width: 460px) {
+  .container {
+    width: 98%;
+    margin: auto;
+  }
+
+  .title {
+    font-size: 24px;
+    color: #161525;
+  }
+  .content {
+    display: flex;
+    flex-direction: column;
+  }
+  .info {
+    margin-left: 0px;
+  }
+  .img {
+    border: solid 4px #672b29;
+    width: 98%;
+  }
+}
