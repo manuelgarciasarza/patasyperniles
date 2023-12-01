@@ -10,24 +10,24 @@
     "porciones": [
       {
         "cantidad": 2,
-        "precio": 9200
+        "precio": 10500
       },
       {
         "cantidad": 4,
-        "precio": 14800
+        "precio": 15000
       },
       {
         "cantidad": 8,
-        "precio": 28000
+        "precio": 30000
       },
       {
         "cantidad": 10,
-        "precio": 30500
+        "precio": 33000
+      },
+      {
+        "cantidad": 15,
+        "precio": 45000
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
@@ -41,24 +41,24 @@
     "porciones": [
       {
         "cantidad": 2,
-        "precio": 8900
+        "precio": 9900
       },
       {
         "cantidad": 4,
-        "precio": 13900
+        "precio": 14300
       },
       {
         "cantidad": 8,
-        "precio": 27300
+        "precio": 28600
       },
       {
         "cantidad": 10,
-        "precio": 28500
+        "precio": 31700
+      },
+      {
+        "cantidad": 15,
+        "precio": 38000
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   }
 ]

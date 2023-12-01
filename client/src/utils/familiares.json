@@ -10,12 +10,8 @@
     "porciones": [
       {
         "cantidad": "6 a 8",
-        "precio": 32700
+        "precio": 34900
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
@@ -29,16 +25,12 @@
     "porciones": [
       {
         "cantidad": "2 a 3",
-        "precio": 10500
+        "precio": 11900
       },
       {
         "cantidad": "4 a 5",
-        "precio": 16800
+        "precio": 18800
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
@@ -52,16 +44,12 @@
     "porciones": [
       {
         "cantidad": "3 a 4",
-        "precio": 17800
+        "precio": 19800
       },
       {
         "cantidad": "6 a 7",
-        "precio": 32500
+        "precio": 38000
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   }
 ]

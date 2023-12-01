@@ -10,28 +10,40 @@
     "porciones": [
       {
         "cantidad": "2 a 4",
-        "precio": 18000
+        "precio": 22000
       },
       {
         "cantidad": "4 a 8",
-        "precio": 22800
+        "precio": 26800
       },
       {
         "cantidad": "5 a 10",
-        "precio": 30500
+        "precio": 34500
       },
       {
         "cantidad": "10 a 15",
-        "precio": 36500
+        "precio": 40000
       },
       {
         "cantidad": "15 a 20",
-        "precio": 44500
+        "precio": 46000
+      },
+      {
+        "cantidad": "25 a 30",
+        "precio": 49800
+      },
+      {
+        "cantidad": "30 a 35",
+        "precio": 56800
+      },
+      {
+        "cantidad": "35 a 40",
+        "precio": 62800
+      },
+      {
+        "cantidad": "45 a 50",
+        "precio": 71000
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   }
 ]

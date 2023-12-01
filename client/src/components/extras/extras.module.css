@@ -6,6 +6,7 @@
 .items {
   display: flex;
   justify-content: space-between;
+  width: 100%;
 }
 
 .count {
@@ -16,4 +17,34 @@
 
 .hr {
   border-color: #672b29;
+  border-style: solid;
+}
+
+.container {
+  width: 100%;
+  color: #161525;
+}
+
+.items {
+  display: flex;
+  justify-content: space-between;
+  align-items: center; /* Alinea los elementos verticalmente */
+  width: 100%;
+}
+
+.count {
+  display: flex;
+  flex-direction: row-reverse;
+  gap: 6px;
+}
+
+.price {
+  font-weight: bold;
+  margin-left: 10px; /* Espacio entre el contador y el precio */
+}
+
+.column-container {
+  display: flex;
+  flex-wrap: wrap; /* Envuelve los elementos en dos columnas */
+  gap: 20px; /* Espacio entre columnas */
 }

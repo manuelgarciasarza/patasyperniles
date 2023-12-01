@@ -31,6 +31,76 @@
   color: #fff;
 }
 
+.boton {
+  background-color: rgba(0, 0, 0, 0);
+  color: #672b29;
+  border-color: #672b29;
+  transition: background-color 0.3s ease, color 0.3s ease;
+  cursor: pointer;
+  font-size: 20px;
+  padding: 10px;
+  border-style: solid;
+}
+
+.boton:hover {
+  background-color: #672b29;
+  color: #fff;
+}
+
 .extras {
   width: 100%;
+  padding: 10px;
+  border: solid #672b29 2px;
+}
+
+.totalCarrito {
+  display: flex;
+  width: 100%;
+  justify-content: flex-end;
+  color: #161525;
+  font-size: 30px;
+  font-weight: 100;
+  margin-bottom: 20px;
+}
+
+.total {
+  color: #161525;
+  font-size: 30px;
+  font-weight: 500;
+  margin: 20px 0px;
+}
+
+.campos {
+  display: flex;
+  flex-direction: column;
+}
+
+.form {
+  color: #161525;
+  display: flex;
+  width: 100%;
+  flex-direction: column;
+  gap: 10px;
+  padding: 30px;
+}
+
+.formCont {
+  width: 50%;
+  margin: auto;
+}
+
+.submit {
+  display: flex;
+  justify-content: center;
+  margin-top: 30px;
+}
+
+input {
+  padding: 5px;
+  padding-left: 10px;
+}
+
+label {
+  font-weight: 500;
+  margin-top: 10px;
 }

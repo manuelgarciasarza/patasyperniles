@@ -2,7 +2,7 @@
   {
     "id": 1,
     "nombre": "Pernil de Cerdo",
-    "descripcion": "Es una opcion práctica que elegimos cuando tenemos un evento familiar, empresarial, o eventual. Para compartir con la familia los amigos o compañeros de trabajo. Se entrega caliente, acompañado de panes y salsas, listo para servir en la mesa.",
+    "descripcion": "Es una opcion práctica que elegimos cuando tenemos un evento familiar, empresarial, o eventual. Para compartir con la familia los amigos o compañeros de trabajo. Se entrega caliente, acompañado de panes y salsas, listo para servir en la mesa. Viene con figazas de manteca y salsas!!",
     "preparacion": "Se  obtiene a partir del cuarto  trasero o delantero del animal. Como primer medida se le retira el cuero para luego ser macerado con una base de finas hierbas varias horas, esto nos permite que la cocción en nuestros hornos a temperatura baja estén libres de grasa para poder acentuar en el pernil los sabores que le aportan las especies y asi garantizar un sabor exquisito.",
     "presentacion": "Se entrega en una caja con visor. La base que tiene viene forrada en papel aluminio es utilizada como bandeja para filetear el producto y servirlo en la mesa. El pernil viene caliente envuelto en papel aluminio y film térmico para conservar su temperatura (3 hs) hasta el momento de servirse. Va acompañado de pancitos caseros y deliciosas salsas en bols con sus respectivas fajas de identificación, y cada una con sus untadores de madera fáciles de usar. Las figacitas de manteca caseras van en una bolsa de naylon para conservar su textura, tambien adentro de bolsa de papel que se utiliza como panera  en la mesa.",
     "fileteador": "Es una persona que filetea el pernil y coloca dicho corte en la figacita previamente contada. Entregandole al comensal quien lo recibe y elige en una variedad de salsas con la que va a acompañar el sandwich.",
@@ -10,58 +10,58 @@
     "porciones": [
       {
         "cantidad": 10,
-        "precio": 28300
+        "precio": 35000
       },
       {
         "cantidad": 15,
-        "precio": 32500
+        "precio": 39000
       },
       {
         "cantidad": 20,
-        "precio": 41000
+        "precio": 47000
       },
       {
         "cantidad": 30,
-        "precio": 53100
+        "precio": 62500
       },
       {
         "cantidad": 40,
-        "precio": 65200
+        "precio": 72800
       },
       {
         "cantidad": 50,
-        "precio": 95100
+        "precio": 99900
       },
       {
         "cantidad": 60,
-        "precio": 102900
+        "precio": 115000
       },
       {
         "cantidad": 70,
-        "precio": 119500
+        "precio": 132000
       },
       {
         "cantidad": 80,
-        "precio": 155400
+        "precio": 145200
+      },
+      {
+        "cantidad": 90,
+        "precio": 164000
       },
       {
         "cantidad": 100,
-        "precio": 172100
+        "precio": 193200
       },
       {
         "cantidad": 150,
-        "precio": 259000
+        "precio": 294200
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
     "id": 2,
     "nombre": "Pata de Ternera",
-    "descripcion": "Es una opcion práctica que elegimos cuando tenemos un evento familiar, empresarial, o eventual. Para compartir con la familia los amigos o compañeros de trabajo. Se entrega caliente, acompañado de panes y salsas, listo para servir en la mesa.",
+    "descripcion": "Es una opcion práctica que elegimos cuando tenemos un evento familiar, empresarial, o eventual. Para compartir con la familia los amigos o compañeros de trabajo. Se entrega caliente, acompañado de panes y salsas, listo para servir en la mesa. Viene con figazas de manteca y salsas!!",
     "preparacion": "La pata de ternera se obtiene del cuarto trasero o cuarto delantero del animal según la cantidad de comensales solicitado. Se deja macerar varias horas con especies de distintos sabores. Luego ingresa al horno a temperatura de 180/ 200 grados para ser horneado lentamente asi conservar la terneza de la pata y su cocción hasta el hueso.",
     "presentacion": "Se entrega en una caja con visor. La base que tiene viene forrada en papel aluminio es utilizada como bandeja para filetear el producto y servirlo en la mesa. El pernil viene caliente envuelto en papel aluminio y film térmico para conservar su temperatura (3 hs) hasta el momento de servirse. Va acompañado de pancitos caseros y deliciosas salsas en bols con sus respectivas fajas de identificación, y cada una con sus untadores de madera fáciles de usar. Las figacitas de manteca caseras van en una bolsa de naylon para conservar su textura, tambien adentro de bolsa de papel que se utiliza como panera  en la mesa.",
     "imagen": "https://lh3.googleusercontent.com/pw/ADCreHeHxhVE69rMPz3ilhIP2Zla_-phXiGpAK_MSi7MfpgFWygbxnt6pHDS9knCdmTu76ZDzobpRddKhdWr2LigUyTvcWpOncyiob-5mwnRcP6ACoajn5IAX-ncq0UHiPwQ8ddFR36TvOIsRgy1rdrMacboVA=w1121-h607-s-no-gm?authuser=0",
@@ -69,58 +69,54 @@
     "porciones": [
       {
         "cantidad": 15,
-        "precio": 47500
+        "precio": 55700
       },
       {
         "cantidad": 20,
-        "precio": 58500
+        "precio": 66000
       },
       {
         "cantidad": 30,
-        "precio": 82400
+        "precio": 92500
       },
       {
         "cantidad": 35,
-        "precio": 87800
+        "precio": 98000
       },
       {
         "cantidad": 40,
-        "precio": 92200
+        "precio": 104500
       },
       {
         "cantidad": 50,
-        "precio": 108300
+        "precio": 125000
       },
       {
         "cantidad": 60,
-        "precio": 131000
+        "precio": 143900
       },
       {
         "cantidad": 70,
-        "precio": 136000
+        "precio": 159000
       },
       {
         "cantidad": 80,
-        "precio": 155800
+        "precio": 179900
+      },
+      {
+        "cantidad": 90,
+        "precio": 199000
       },
       {
         "cantidad": 100,
-        "precio": 175800
-      },
-      {
-        "cantidad": 150,
-        "precio": 195000
+        "precio": 225800
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   },
   {
     "id": 3,
     "nombre": "Combinada de Cerdo y Ternera",
-    "descripcion": "Aquí encontraremos la combinacion del pernil de cerdo y la pata de ternera para reuniones o eventos mas de 25 comensales y compartir con familia, amigos, compañeros de trabajo. Se entrega caliente, acompañado de panes y deliciosas salsas, listo para servir en la mesa.",
+    "descripcion": "Aquí encontraremos la combinacion del pernil de cerdo y la pata de ternera para reuniones o eventos mas de 25 comensales y compartir con familia, amigos, compañeros de trabajo. Se entrega caliente, acompañado de panes y deliciosas salsas, listo para servir en la mesa. Viene con figazas de manteca y salsas!!",
     "preparacion": "La pata de ternera se obtiene del cuarto trasero o cuarto delantero del animal según la cantidad de comensales solicitado. Se deja macerar varias horas con especies de distintos sabores. Luego ingresa al horno a temperatura de 180/ 200 grados para ser horneado lentamente asi conservar la terneza de la pata y su cocción hasta el hueso.",
     "presentacion": "Se entrega en una caja con visor. La base que tiene viene forrada en papel aluminio es utilizada como bandeja para filetear el producto y servirlo en la mesa. El pernil viene caliente envuelto en papel aluminio y film térmico para conservar su temperatura (3 hs) hasta el momento de servirse. Va acompañado de pancitos caseros y deliciosas salsas en bols con sus respectivas fajas de identificación, y cada una con sus untadores de madera fáciles de usar. Las figacitas de manteca caseras van en una bolsa de naylon para conservar su textura, tambien adentro de bolsa de papel que se utiliza como panera  en la mesa.",
     "imagen": "https://lh3.googleusercontent.com/pw/ADCreHf1Oo60bhW2cWyoAgqxYTaHaqy55o9buBr_wEQrprRPqpQLSP171s10DABvSkQGl9gbsx0d4IZdaIlGuNnxCpj4bpyc5wDwl6MDEPcmh9FNdQ8mYTBsUahnbfRPQIKSyImP0AZb1F__EKdY-GOZbERdGg=w1349-h607-s-no-gm?authuser=0",
@@ -128,60 +124,56 @@
     "porciones": [
       {
         "cantidad": 25,
-        "precio": 78800
+        "precio": 90700
       },
       {
         "cantidad": 30,
-        "precio": 82400
+        "precio": 94900
       },
       {
         "cantidad": 40,
-        "precio": 102300
+        "precio": 115000
       },
       {
         "cantidad": 50,
-        "precio": 125800
+        "precio": 138000
       },
       {
         "cantidad": 60,
-        "precio": 137700
+        "precio": 155000
       },
       {
         "cantidad": 70,
-        "precio": 147800
+        "precio": 172800
       },
       {
         "cantidad": 80,
-        "precio": 159700
+        "precio": 180000
       },
       {
         "cantidad": 90,
-        "precio": 175600
+        "precio": 204500
       },
       {
         "cantidad": 100,
-        "precio": 194800
+        "precio": 225900
       },
       {
         "cantidad": 120,
-        "precio": 234500
+        "precio": 265800
       },
       {
         "cantidad": 140,
-        "precio": 274300
+        "precio": 295700
       },
       {
         "cantidad": 150,
-        "precio": 293100
+        "precio": 325000
       },
       {
         "cantidad": 200,
-        "precio": 392200
+        "precio": 425500
       }
-    ],
-    "extras": [
-      "Extra 1: Descripción del extra 1...",
-      "Extra 2: Descripción del extra 2..."
     ]
   }
 ]
