@@ -3,7 +3,7 @@ import React, { useState, useEffect } from "react";
 
 export const EXTRA_PRICES = {
   "Figazas de manteca x25": 1700,
-  Chimichurri: 1800,
+  "Chimichurri": 1800,
   "Crema de Albahaca": 1800,
   "Crema de Barbacoa": 1800,
   "Chutney de Cebolla morada al malbec": 1800,
@@ -11,20 +11,20 @@ export const EXTRA_PRICES = {
   "Mostaza y Miel": 1800,
   "Crema de Cheddar": 1800,
   "Crema de Hongos": 1800,
-  Philadelphia: 1800,
+  "Philadelphia": 1800,
   "Mayonesa de Naranja": 1800,
   "Mix Criolla": 1800,
   "Salsa Tartara": 1800,
   "Salsa Aioli": 1800,
   "Salsa Coleslaw": 1800,
   "Salsa del Bosque": 1800,
-  Berenjenas: 1800,
+  "Berenjenas": 1800,
   "Vitel Tone": 1800,
-  Cuchilla: 4000,
+  "Cuchilla": 4000,
   "Servicio de filetedeador x2HS": 17000,
 };
 
-function ExtraItem({ name, count, setCount }) {
+const ExtraItem = ({ name, count, setCount }) => {
   const handleIncrement = () => {
     if (name === "Figazas de manteca x25") {
       setCount(count + 25);
@@ -43,10 +43,12 @@ function ExtraItem({ name, count, setCount }) {
     }
   };
 
+  const price = EXTRA_PRICES[name];
+
   return (
     <div>
       <div className={style.items}>
-        <p>{name}</p>
+      <p>{name} - Precio: ${price}</p>
         <div className={style.count}>
           <button onClick={handleIncrement}>+</button>
           <p>{count}</p>
@@ -64,6 +66,7 @@ function Extras({
   extrasTotal,
   setExtras,
 }) {
+
   const [counts, setCounts] = useState({});
 
   const extraItems = [
@@ -89,11 +92,13 @@ function Extras({
     "Servicio de filetedeador x2HS",
   ];
 
+
   const handleExtrasTotal = () => {
     let total = 0;
     for (const item in counts) {
-      if (item === "Figazas de manteca") {
+      if (item === "Figazas de manteca x25") {
         total += Math.floor(counts[item] / 25) * EXTRA_PRICES[item];
+      
       } else {
         total += counts[item] * EXTRA_PRICES[item];
       }
@@ -103,7 +108,7 @@ function Extras({
 
   useEffect(() => {
     handleExtrasTotal();
-    setExtras(counts); // Update the parent component state with the selected extras
+    setExtras(counts);
   }, [counts, onExtrasTotal, setExtras]);
 
   return (

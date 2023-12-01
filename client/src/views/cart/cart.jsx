@@ -77,37 +77,36 @@ const ShoppingCart = () => {
         "\n"
       )}\n`;
   
-      if (selectedExtras && Object.keys(selectedExtras).length > 0) {
-        message += "\nExtras:\n";
-        for (const extra in selectedExtras) {
-          const count = selectedExtras[extra];
-          const price = EXTRA_PRICES[extra] * count;
+      message += "----------------------------------------\n";
+      message += "Extras:\n";
+      for (const extra in selectedExtras) {
+        const count = selectedExtras[extra];
+        const price = EXTRA_PRICES[extra] * count;
   
-          
-          if (count !== 0 && price !== 0) {
-            if (extra === "Figazas de manteca") {
-              const specialPriceCount = Math.floor(count / 25);
-              const remainingCount = count % 25;
-              let priceDetails = `Figazas de manteca - Cantidad: ${count}, Precio: `;
-              for (let i = 1; i <= specialPriceCount; i++) {
-                priceDetails += `$${i * 500}\n`;
-              }
-              if (remainingCount > 0) {
-                priceDetails += `${count}: $${EXTRA_PRICES[extra] * remainingCount}\n`;
-              }
-              message += `${priceDetails}\n\n`;
-            } else {
-              message += `${extra} - Cantidad: ${count}, Precio: ${price}\n\n`;
+        if (count !== 0 && price !== 0) {
+          if (extra === "Figazas de manteca") {
+            const specialPriceCount = Math.floor(count / 25);
+            const remainingCount = count % 25;
+            let priceDetails = `Figazas de manteca - Cantidad: ${count}, Precio: `;
+            for (let i = 1; i <= specialPriceCount; i++) {
+              priceDetails += `$${i * 500} (cantidad: ${i * 25})\n`;
             }
+            if (remainingCount > 0) {
+              priceDetails += `${count}: $${EXTRA_PRICES[extra] * remainingCount} (cantidad: ${remainingCount})\n`;
+            }
+            message += `${priceDetails}\n----------------------------------------\n`;
+          } else {
+            message += `${extra} - Cantidad: ${count}, Precio: ${price}\n`;
           }
         }
       }
   
-      message += `*PRECIO FINAL: $${totalPrice}*\n`;
-  
-      message += `\nNombre y apellido: ${formData.nombre}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.mail}\nDirección: ${formData.direccion}\nCiudad: ${formData.ciudad}\n`;
-  
-      message += `\nDatos de facturación:\nCBU: 0000003100040860736859\nALIAS: patasyperniles.com\n\n`;
+      message += `----------------------------------------
+      *PRECIO FINAL: $${totalPrice}*\n`;
+      message += "----------------------------------------\n";
+      message += `Nombre y apellido: ${formData.nombre}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.mail}\nDirección: ${formData.direccion}\nCiudad: ${formData.ciudad}\n`;
+      message += "----------------------------------------\n";
+      message += "Datos de facturación:\nCBU: 0000003100040860736859\nALIAS: patasyperniles.com\n";
   
       const encodedMessage = encodeURIComponent(message);
   
@@ -171,7 +170,7 @@ const ShoppingCart = () => {
                   onExtrasTotal={handleExtrasTotal}
                   calculateTotalCarrito={calcularTotalCarrito}
                   extrasTotal={extrasTotal}
-                  setExtras={handleSelectedExtras} // Pass the function to set selected extras
+                  setExtras={handleSelectedExtras} 
                 />
                 <h3>Total de extras: ${extrasTotal}</h3>
               </div>
