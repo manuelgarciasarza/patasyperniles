@@ -16,6 +16,7 @@
   border-radius: 10px;
   align-items: center;
   padding: 0px 20px;
+  color: #161525;
 }
 
 .btn {
@@ -103,4 +104,26 @@ input {
 label {
   font-weight: 500;
   margin-top: 10px;
+}
+
+@media (max-width: 460px) {
+  .container {
+    width: 87%;
+    margin: auto;
+  }
+
+  .cart {
+    justify-content: space-between;
+    height: 40px;
+    padding: 0px 5px;
+  }
+
+  .totalCarrito {
+    font-size: 20px;
+    margin-bottom: 20px;
+  }
+  .formCont {
+    width: 90%;
+    margin: auto;
+  }
 }
