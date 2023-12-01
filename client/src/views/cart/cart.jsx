@@ -6,11 +6,18 @@ import Footer from "../../components/footer/footer";
 import Header from "../../components/header/header";
 import style from "./cart.module.css";
 import Extras from "../../components/extras/extras";
+import { EXTRA_PRICES } from "../../components/extras/extras";
 
 const ShoppingCart = () => {
   const carrito = useSelector((state) => state.carrito);
   const dispatch = useDispatch();
   const navigate = useNavigate();
+
+  const [selectedExtras, setSelectedExtras] = useState({});
+
+const handleSelectedExtras = (extras) => {
+  setSelectedExtras(extras);
+};
 
   const calcularTotalCarrito = () => {
     const total = carrito.reduce((total, item) => {
@@ -58,14 +65,30 @@ const ShoppingCart = () => {
   
       const totalPrice = calcularTotalCarrito() + extrasTotal;
   
-      let message = `Hola, quiero comprar:\n${productsList.join('\n')}\n\nPrecio final: $${totalPrice}\n`;
+      let message = `Hola, quiero comprar:\n${productsList.join('\n')}\n`;
       
-      if (formData.extras) {
+      if (selectedExtras && Object.keys(selectedExtras).length > 0) {
         message += "\nExtras:\n";
-        formData.extras.forEach((extra, index) => {
-          message += `${index + 1}. ${extra.nombre} - Cantidad: ${extra.cantidad}, Precio: ${extra.precio}\n`;
-        });
+        for (const extra in selectedExtras) {
+          if (extra === "Figazas de manteca") {
+            const extraCount = selectedExtras[extra];
+            const specialPriceCount = Math.floor(extraCount / 25); 
+            const remainingCount = extraCount % 25; 
+            let priceDetails = `Figazas de manteca - Cantidad: ${extraCount}, Precio: `;
+            for (let i = 1; i <= specialPriceCount; i++) {
+              priceDetails += `$${i * 500}\n`;
+            }
+            if (remainingCount > 0) {
+              priceDetails += `${extraCount}: $${EXTRA_PRICES[extra] * remainingCount}\n`;
+            }
+            message += `${priceDetails}\n`;
+          } else {
+            message += `${extra} - Cantidad: ${selectedExtras[extra]}, Precio: ${EXTRA_PRICES[extra] * selectedExtras[extra]}\n\n`;
+          }
+        }
+        message += `PRECIO FINAL: $${totalPrice}\n`;
       }
+      
 
       message += `\nNombre: ${formData.nombre}\nTeléfono: ${formData.telefono}\nCorreo: ${formData.mail}\nDirección: ${formData.direccion}\nCiudad: ${formData.ciudad}`;
   
@@ -124,10 +147,11 @@ const ShoppingCart = () => {
            <div className={style.total}>
            <p>Subtotal carrito: ${calcularTotalCarrito()}</p>
            <Extras
-    onExtrasTotal={handleExtrasTotal}
-    calculateTotalCarrito={calcularTotalCarrito}
-    extrasTotal={extrasTotal} 
-  />
+  onExtrasTotal={handleExtrasTotal}
+  calculateTotalCarrito={calcularTotalCarrito}
+  extrasTotal={extrasTotal}
+  setExtras={handleSelectedExtras} // Pass the function to set selected extras
+/>
         <p>Total de extras: ${extrasTotal}</p>
         <p>Precio final: ${calcularTotalCarrito() + extrasTotal}</p>
       </div>

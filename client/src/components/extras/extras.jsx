@@ -1,7 +1,7 @@
 import style from "./extras.module.css";
 import React, { useState, useEffect } from "react";
 
-const EXTRA_PRICES = {
+export const EXTRA_PRICES = {
   "Figazas de manteca": 500, 
   "Chimichurri": 500,
     "Crema de Albahaca": 500,
@@ -55,7 +55,7 @@ function ExtraItem({ name, count, setCount }) {
   );
 }
 
-function Extras({ onExtrasTotal, calculateTotalCarrito, extrasTotal }) {
+function Extras({ onExtrasTotal, calculateTotalCarrito, extrasTotal, setExtras }) {
   const [counts, setCounts] = useState({});
 
   const extraItems = [
@@ -95,7 +95,8 @@ function Extras({ onExtrasTotal, calculateTotalCarrito, extrasTotal }) {
 
   useEffect(() => {
     handleExtrasTotal();
-  }, [counts, onExtrasTotal]);
+    setExtras(counts); // Update the parent component state with the selected extras
+  }, [counts, onExtrasTotal, setExtras]);
 
 
   return (
