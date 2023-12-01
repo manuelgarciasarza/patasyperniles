@@ -9,3 +9,15 @@
   font-size: 24px;
   font-weight: 400px;
 }
+
+@media (max-width: 460px) {
+  .container {
+    gap: 4px;
+  }
+  .link {
+    text-decoration: none;
+    color: #ffffff;
+    font-size: 16px;
+    font-weight: 200px;
+  }
+}

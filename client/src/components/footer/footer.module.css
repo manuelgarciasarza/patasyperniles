@@ -45,3 +45,13 @@
   text-decoration: none;
   font-size: 10px;
 }
+@media (max-width: 460px) {
+  .links {
+    display: none;
+  }
+  .title,
+  .footerInfo,
+  .redes {
+    margin-left: 20px;
+  }
+}

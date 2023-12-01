@@ -1,3 +1,9 @@
 .img {
   height: 600px;
 }
+
+@media (max-width: 460px) {
+  .img {
+    height: 300px;
+  }
+}
