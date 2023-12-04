@@ -20,7 +20,7 @@ function Footer() {
       <div className={style.footerInfo}>
         <div className={style.infoLeft}>
           <p>Buenos Aires, Argentina</p>
-          <p>Oficialwebsite@patasyperniles.com</p>
+          <p>patasyperniles1@gmail.com</p>
           <p>+54 9 11 3578-9595</p>
         </div>
         <div className={style.links}>
@@ -28,7 +28,6 @@ function Footer() {
           <Link Link to={"/"} className={style.link}>
             Inicio
           </Link>
-          <Link className={style.link}>Productos Destacados</Link>
           <Link Link to={"/tienda"} className={style.link}>
             Tienda
           </Link>
