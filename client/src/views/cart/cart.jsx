@@ -101,8 +101,6 @@ const ShoppingCart = () => {
 
       if (filetedeadorSelected) {
         message += `Servicio de filetedeador x2HS - Sí, Precio: $${filetedeadorPrice}\n`;
-      } else {
-        message += null;
       }
 
       message += `----------------------------------------
