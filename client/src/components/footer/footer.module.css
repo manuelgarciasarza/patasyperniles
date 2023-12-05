@@ -29,10 +29,16 @@
   display: flex;
   gap: 20px;
   padding-bottom: 20px;
+  transition: transform 0.3s ease;
 }
 
 .img {
   height: 28px;
+  transition: transform 0.3s ease;
+}
+
+.img:hover {
+  transform: translateY(-6px);
 }
 
 .links {
@@ -44,6 +50,11 @@
   color: #ffffff;
   text-decoration: none;
   font-size: 10px;
+  transition: transform 0.3s ease;
+}
+
+.link:hover {
+  transform: scale(1.1);
 }
 @media (max-width: 460px) {
   .links {

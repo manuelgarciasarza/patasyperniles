@@ -83,18 +83,17 @@ function Detail() {
       alert("Por favor, seleccione una cantidad antes de agregar al carrito");
       return;
     }
-  
+
     dispatch(addToCart(productInfo, selectedOption, selectedPrice));
     alert("¡El producto se ha añadido exitosamente al carrito!");
   };
-  
 
   return (
     <div>
       <Header />
-       <button className={style.btn} onClick={() => navigate("/tienda")}>
-          <span>&#8592;</span> Volver
-        </button>
+      <button className={style.btn} onClick={() => navigate("/tienda")}>
+        <span>&#8592;</span> Volver
+      </button>
       {productInfo ? (
         <div className={style.container}>
           <div>
@@ -107,6 +106,11 @@ function Detail() {
             <div className={style.info}>
               <div className={style.descripcion}>
                 <p>{productInfo.descripcion}</p>
+                {productInfo.promo !== null && (
+                  <>
+                    <p className={style.promo}>{productInfo.promo}</p>
+                  </>
+                )}
               </div>
               <div>
                 <div className={style.cantidad}>
@@ -126,8 +130,8 @@ function Detail() {
                   </select>
                 </div>
                 <div className={style.precio}>
-                  <p>Precio:</p>
-                  <p>{selectedPrice}</p>
+                  <h4>Precio:</h4>
+                  <p className={style.price}>{selectedPrice}</p>
                 </div>
                 <div>
                   <button className={style.btn} onClick={handleAddToCart}>

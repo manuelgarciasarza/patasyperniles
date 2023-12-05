@@ -55,6 +55,14 @@
   font-weight: 500;
 }
 
+.promo {
+  color: #bf231d;
+}
+
+.price {
+  color: #fff;
+}
+
 .btn {
   background-color: rgba(0, 0, 0, 0);
   color: #672b29;
