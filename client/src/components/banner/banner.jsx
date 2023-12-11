@@ -14,6 +14,7 @@ function Banner() {
     <Carousel
       showArrows={true}
       showThumbs={false}
+      g
       showStatus={false}
       showIndicators={true}
       infiniteLoop={true}
